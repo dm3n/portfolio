@@ -144,3 +144,19 @@ These are the details that separate a demo from a system trusted to act on a liv
 Symphony embodies a clear and unusually mature thesis about autonomous AI in production: **agents are capable implementers but should not hold approval authority.** So the system gives the agent real power — isolated workspaces, full implementation, validation, evidence generation, branch and PR operations — while routing every *decision* (scope completeness, visual correctness, merge approval) through a human, and making that human's job trivial by attaching evidence and classifying intent automatically.
 
 The result is a working instance of supervised autonomy: dozens of tickets driven from description to evidence‑backed, review‑gated PR, with the hard parts (safe git, process hygiene, failure recovery, cross‑repo correctness, fake‑evidence rejection) actually solved rather than hand‑waved. It is, in effect, *the tooling that builds the product* — built by the same person who wrote the theory explaining why it has to work this way.
+
+---
+
+## Extended information
+
+This page is the portfolio‑level summary. The **full engineering design record** — deep‑dive architecture, the complete Jira‑native state machine, the production‑hardening catalog, deployment topology, observability, the security/trust model, and sanitized reference interfaces (config schema, the acceptance‑contract prompt template, and the orchestrator interface skeleton) — lives in the dedicated repository:
+
+### 👉 [github.com/dm3n/symphony](https://github.com/dm3n/symphony)
+
+| Deep dive | |
+|---|---|
+| [Architecture](https://github.com/dm3n/symphony/blob/main/docs/architecture.md) | Components, data flow, orchestrator, integrations |
+| [State machine](https://github.com/dm3n/symphony/blob/main/docs/state-machine.md) | Every status, label, transition, and the feedback classifier |
+| [Hardening](https://github.com/dm3n/symphony/blob/main/docs/hardening.md) | Safe git, watchdogs, evidence integrity, failure recovery |
+| [Deployment](https://github.com/dm3n/symphony/blob/main/docs/deployment.md) | macOS LaunchAgent + GCP/systemd |
+| [Security](https://github.com/dm3n/symphony/blob/main/docs/security.md) · [Design rationale](https://github.com/dm3n/symphony/blob/main/docs/design-rationale.md) | Trust model + the "why" behind every decision |
