@@ -1,5 +1,7 @@
 # Symphony — A Jira-Native Autonomous Software-Development Runner
 
+> 📦 **Full dedicated repository: [`github.com/dm3n/symphony`](https://github.com/dm3n/symphony)** — complete engineering design record (architecture, state machine, hardening, deployment, security, and sanitized reference interfaces). This page is the portfolio‑level summary.
+
 > **Designed and built by Daniel Edgar as CTO of Finsider. Deployed live in Finsider's active development environment**, where it takes product tickets from backlog to reviewed, evidence‑backed pull requests with a human in the loop.
 
 > *Note on confidentiality:* this document describes the **architecture and engineering**. Employer‑internal specifics (private repository URLs, the Jira instance, internal project keys, and credentials) are intentionally generalized.

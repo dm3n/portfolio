@@ -28,7 +28,8 @@ This page maps the contents of this portfolio to the O‑1A "extraordinary abili
 ## 1.C — High Salary / Remuneration
 | Checklist item | Where |
 |---|---|
-| Employment terms, equity valuation | CTO role at Finsider; SAFE‑backed equity from the Antler‑funded entity — documents in the data room |
+| Salary exceeding the norm | **$200K CTO salary at age 20** — stated in [Ventures](05-ventures-and-companies.md); employment letter / pay records in the data room |
+| Equity & valuation | Raised **$230K at a $2.3M valuation** (Flagpost / Antler); SAFE‑backed equity — terms in the data room |
 
 ## 1.D — Letters of Recommendation (≥10)
 | Source category | Notes |

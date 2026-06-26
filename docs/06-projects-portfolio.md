@@ -69,6 +69,23 @@ A role‑based dashboard unifying student onboarding, a job‑placement board, p
 
 ---
 
+## Nassau — full‑stack golf e‑commerce platform, built from scratch
+**Repo:** [`dm3n/nassau`](https://github.com/dm3n/nassau)
+**Stack:** Next.js, Sanity (headless CMS), Stripe, Firebase, React Query, Tailwind + DaisyUI, Framer Motion
+
+A complete, production‑grade e‑commerce store for golf — designed and built end‑to‑end, no template, no Shopify. It demonstrates full‑stack breadth well beyond AI work:
+
+- **Headless commerce architecture** — a Sanity CMS backend models the entire catalog (products, variants, imagery, rich content via Portable Text), decoupled from the Next.js storefront.
+- **Real payments** — full **Stripe** checkout integration (cart → session → payment), not a mock.
+- **Backend & data** — Firebase for backend services; **React Query** for a robust client data/caching layer.
+- **Premium product UX** — inner‑image zoom, pan/pinch, Swiper carousels, animated transitions (Framer Motion), toast notifications, confetti on purchase, and a scroll‑restoring SPA feel.
+
+> Why it's here: it proves Daniel can architect and ship a complete commercial web application — CMS, payments, data layer, and polished UX — from a blank repo. The same full‑stack command underpins every AI platform in this portfolio.
+
+---
+
 ### Also in the portfolio
 - [`dm3n/human-divinity`](https://github.com/dm3n/human-divinity) — a second long‑form LaTeX research manuscript (interdisciplinary).
-- [`dm3n/nodebase`](https://github.com/dm3n/nodebase), [`dm3n/nassau`](https://github.com/dm3n/nassau), [`dm3n/OpenCV`](https://github.com/dm3n/OpenCV), [`dm3n/ratestore`](https://github.com/dm3n/ratestore) — earlier full‑stack and computer‑vision work showing a long build history.
+- [`dm3n/nodebase`](https://github.com/dm3n/nodebase) — full‑stack TypeScript application.
+- [`dm3n/ratestore`](https://github.com/dm3n/ratestore) — TypeScript web app.
+- [`dm3n/OpenCV`](https://github.com/dm3n/OpenCV) — real‑time hand‑tracking / computer‑vision in Python (early systems work showing range).

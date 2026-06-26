@@ -1,13 +1,18 @@
 # Ventures & Trajectory
 
-A compressed timeline of company‑building in AI — from an Antler‑backed founder/CEO, to a bridge venture in M&A AI, to a full‑time CTO role at a funded fintech. Specific investor, customer, and financial details are maintained in a private data room and available to counsel on request (see end of page).
+A compressed timeline of company‑building in AI — from an Antler‑backed founder/CEO, to a bridge venture in M&A AI, to a full‑time CTO role at a funded fintech — **all before the age of 21.**
+
+## Education
+**Queen's University — Computer Science.** Queen's runs one of Canada's most competitive engineering programs. Daniel left to build full‑time after raising venture funding (below). Founders who leave top CS programs to run funded companies are exactly the profile the O‑1A "extraordinary ability" standard is designed for.
+
+> Note: granular investor, customer, and contractual specifics live in a private data room available to counsel on request (see end of page). The headline funding, valuation, and compensation figures below are included at the applicant's direction as evidence of traction and remuneration.
 
 ---
 
 ## Flagpost AI Inc. — Co‑founder & CEO (Antler Canada)
 *Incorporated November 2025 · Toronto, Canada*
 
-Flagpost was built inside the **Antler Canada residency (TOR8 cohort)** — Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. Flagpost received a **SAFE investment from Antler Canada Fund I, L.P.**
+Flagpost was built inside the **Antler Canada residency (TOR8 cohort)** — Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised $230,000 at a $2.3M valuation**, anchored by a **SAFE from Antler Canada Fund I, L.P.** — at age 19.
 
 - Passed the Antler Investment Committee and onboarded into the residency cohort.
 - Built the founding team, corporate structure (cap table, shareholder agreement, reverse‑vesting, stock option plan, IP assignment), and banking.
@@ -38,7 +43,9 @@ Airbank also assembled an advisory and design‑partner network spanning private
 ## Finsider — Chief Technology Officer (full‑time)
 *[finsider.ai](https://finsider.ai)*
 
-Daniel joined **Finsider as full‑time CTO**, bringing the M&A‑AI thesis and the agentic‑systems expertise from Flagpost/Airbank into a funded, operating fintech with an existing product and customers.
+Daniel joined **Finsider as full‑time CTO on a $200,000 salary — at age 20**, bringing the M&A‑AI thesis and the agentic‑systems expertise from Flagpost/Airbank into a funded, operating fintech with an existing product and customers. A $200K CTO compensation at 20 is itself O‑1A evidence of **high remuneration** (criterion 1.C): it materially exceeds the norm for the applicant's age and tenure and reflects the market's valuation of his extraordinary ability.
+
+The mandate: **automate Quality‑of‑Earnings** — the mandatory, six‑figure financial‑diligence report behind every M&A transaction — and build the platform and agentic infrastructure to do it at scale.
 
 As CTO, the headline technical contribution is **Symphony** — a Jira‑native autonomous software‑development runner that takes product tickets through implementation, evidence capture, human review, and pull‑request submission, deployed live in Finsider's active development environment. Full architecture: [Symphony](02-symphony-architecture.md). Finsider‑specific platform and product work is summarized in [Finsider CTO](04-finsider-cto.md).
 
