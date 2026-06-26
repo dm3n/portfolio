@@ -29,7 +29,7 @@ This page maps the contents of this portfolio to the O‑1A "extraordinary abili
 | Checklist item | Where |
 |---|---|
 | Salary exceeding the norm | **$200K CTO salary at age 20** — stated in [Ventures](05-ventures-and-companies.md); employment letter / pay records in the data room |
-| Equity & valuation | Raised **$230K at a $2.3M valuation** (Flagpost / Antler); SAFE‑backed equity — terms in the data room |
+| Equity & valuation | Raised **$220K at a $2.2M valuation** (Flagpost / Antler); SAFE‑backed equity — terms in the data room |
 
 ## 1.D — Letters of Recommendation (≥10)
 | Source category | Notes |

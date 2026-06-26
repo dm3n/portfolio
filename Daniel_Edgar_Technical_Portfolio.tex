@@ -1,223 +1,306 @@
 \documentclass[11pt]{article}
 
-% ---------- packages ----------
+% ---- packages (kept close to a standard preprint) ----
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper,margin=0.85in]{geometry}
-\usepackage{xcolor}
-\usepackage{titlesec}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage{enumitem}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{parskip}
-\usepackage{fancyhdr}
-\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{1A4FA0}
+\usepackage[colorlinks=true, linkcolor=linkblue, urlcolor=linkblue, citecolor=linkblue]{hyperref}
 
-% ---------- colors ----------
-\definecolor{ink}{HTML}{12233B}
-\definecolor{accent}{HTML}{1F4E79}
-\definecolor{steel}{HTML}{5B6B7B}
-\definecolor{rule}{HTML}{C9D2DB}
+% ---- theorem environments (match the paper) ----
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{principle}{Principle}
 
-\hypersetup{
-  colorlinks=true,
-  linkcolor=accent,
-  urlcolor=accent,
-  pdftitle={Daniel Ray Edgar -- Technical Ability Overview},
-  pdfauthor={Daniel Ray Edgar}
-}
-
-% ---------- section styling ----------
-\titleformat{\section}
-  {\color{accent}\large\bfseries\scshape}{}{0em}{}[\vspace{2pt}{\color{rule}\titlerule[1pt]}]
-\titlespacing*{\section}{0pt}{14pt}{6pt}
-
-\titleformat{\subsection}
-  {\color{ink}\normalsize\bfseries}{}{0em}{}
-\titlespacing*{\subsection}{0pt}{8pt}{2pt}
-
-\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=2pt}
-\renewcommand{\arraystretch}{1.25}
-
-% ---------- header / footer ----------
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{\footnotesize\color{steel}Daniel Ray Edgar}
-\fancyfoot[C]{\footnotesize\color{steel}Technical Ability Overview \& Itinerary}
-\fancyfoot[R]{\footnotesize\color{steel}\thepage}
-
+% ---- helpers ----
 \newcommand{\repo}[1]{\href{https://github.com/dm3n/#1}{\texttt{github.com/dm3n/#1}}}
+\setlist[itemize]{itemsep=2pt, topsep=3pt, leftmargin=1.4em}
+
+\title{\textbf{Architecting Agentic Software Systems}\\[2pt]
+\large A Technical Portfolio and Professional Itinerary}
+\author{Daniel Ray Edgar\\[2pt]
+\normalsize \href{mailto:daniel@nodebase.ca}{daniel@nodebase.ca} \quad\textbar\quad
+\href{https://github.com/dm3n}{github.com/dm3n} \quad\textbar\quad
+\href{https://finsider.ai}{finsider.ai}}
+\date{\today}
 
 \begin{document}
-\setlength{\parskip}{4pt}
+\maketitle
 
-% ================= HEADER =================
-\begin{center}
-  {\color{ink}\Huge\bfseries Daniel Ray Edgar}\\[4pt]
-  {\color{accent}\large Chief Technology Officer \quad\textbar\quad AI Systems Engineer \quad\textbar\quad Researcher}\\[6pt]
-  {\color{steel}\small
-    \href{mailto:daniel@nodebase.ca}{daniel@nodebase.ca}
-    \;\textbar\;
-    \href{https://github.com/dm3n}{github.com/dm3n}
-    \;\textbar\;
-    \href{https://finsider.ai}{finsider.ai}
-  }
-\end{center}
-\vspace{2pt}
-{\color{rule}\hrule height 1.5pt}
-\vspace{6pt}
+\begin{abstract}
+\noindent
+This document is a technical overview of my work designing, building, and deploying
+\emph{agentic software systems} --- autonomous and semi-autonomous programs that plan,
+act, and verify their own work under engineered constraints. I am the Chief Technology
+Officer of Finsider, where I built and deployed \textsc{Symphony}, a supervised-autonomy
+software-delivery runner that drives product tickets to reviewed, evidence-backed pull
+requests. Before this I studied Computer Science at Queen's University, then raised
+\$220{,}000 at a \$2.2M valuation as co-founder and CEO of an Antler Canada--backed company
+at the age of 19, and authored single-author research formalizing the reliability of
+multi-step language-model reasoning --- validated against four frontier models to within
+roughly one percent of empirical accuracy. The unifying thread of this portfolio is a
+specific, defensible engineering thesis about autonomous AI, derived from that research and
+realized in production. This document doubles as a professional itinerary; my curriculum
+vitae is appended. Every system referenced is hyperlinked to its public source repository.
+\end{abstract}
 
-% ================= SUMMARY =================
-\section{Professional Summary}
-AI systems engineer and founder building applied artificial intelligence for the highest-stakes
-work in finance. Currently \textbf{Chief Technology Officer of Finsider}, automating Quality of
-Earnings --- the mandatory financial-diligence report behind every M\&A transaction. Studied
-\textbf{Computer Science at Queen's University} before leaving to build; \textbf{raised
-\$230{,}000 at a \$2.3M valuation} as co-founder and CEO of an Antler Canada--backed company at 19.
-Author of original, single-author research on the reliability of large-language-model reasoning,
-validated against four frontier models. Designs the theory, builds the systems, and engineers the
-autonomous infrastructure that runs them --- with auditability and supervised autonomy as first
-principles.
+% =====================================================================
+\section{Introduction}
+% =====================================================================
+I build artificial-intelligence systems for the highest-stakes work in finance, and I build
+the autonomous infrastructure that builds them. My work spans three layers that most
+engineers treat separately: the \emph{theory} of why language-model systems fail, the
+\emph{systems} that exploit that theory in production, and the \emph{tooling} that lets a
+single engineer operate at the throughput of a team.
 
-\textit{This document is both a technical ability overview and the project/role itinerary for the
-applicant. Every system referenced links to its public source repository.}
+The defining specialization is \emph{agentic software} --- programs that decompose a goal
+into steps, take real actions in the world (writing code, querying corpora, operating a
+browser, transacting), and judge the quality of their own output. Agentic systems are
+powerful and notoriously unreliable; the central engineering problem is making them
+trustworthy enough to point at production. The systems in this portfolio are my answers to
+that problem, and Section~\ref{sec:research} gives the formal reason they are designed the
+way they are.
 
-% ================= CORE COMPETENCIES =================
+\paragraph{Selected facts.}
+Chief Technology Officer of Finsider on a \$200{,}000 salary at the age of 20; raised
+\$220{,}000 at a \$2.2M valuation (Antler Canada Fund~I SAFE) as co-founder/CEO before
+turning 20; single-author research validated against GPT-5, Claude Opus~4.6, Claude
+Sonnet~4.6, and Gemini~3.1~Pro; author of \textsc{Symphony}, deployed live in a commercial
+engineering environment.
+
+% =====================================================================
 \section{Core Technical Competencies}
+% =====================================================================
+\noindent
+\begin{description}[leftmargin=0pt, labelsep=0.5em, style=unboxed, itemsep=4pt]
+  \item[\normalfont\textbf{Agentic systems (primary specialization).}] Supervised-autonomy
+  architectures; ticket-native state machines; acceptance-contract prompting; evidence-gated
+  delivery pipelines; multi-agent orchestration with shared context; tool-use design;
+  process supervision, watchdogs, and safe automated Git; failure recovery with bounded
+  retry.
+  \item[\normalfont\textbf{Applied AI / LLMs.}] LLM orchestration; Retrieval-Augmented
+  Generation (Vertex AI RAG; corpus-per-workload; parallel multi-query retrieval with
+  dedup/ranking); structured extraction with calibrated confidence; process reward models;
+  frontier-model evaluation; Anthropic, Google Vertex AI, and Gemini~2.0~Flash APIs.
+  \item[\normalfont\textbf{Languages.}] Python, TypeScript/JavaScript, Swift (iOS), SQL,
+  Bash, \LaTeX.
+  \item[\normalfont\textbf{Full-stack.}] Next.js~16, React~19, Tailwind~v4, shadcn/ui;
+  Supabase (PostgreSQL, Row-Level Security, Auth, Storage), Firebase, Sanity (headless CMS);
+  Stripe, Resend, Twilio; server-sent-event streaming, async job queues, webhook pipelines.
+  \item[\normalfont\textbf{Cloud \& infrastructure.}] Google Cloud Platform (Compute Engine,
+  Cloud Storage, Vertex AI), Vercel; self-hosted Proxmox cluster, Docker, \texttt{systemd},
+  macOS \texttt{launchd}, Tailscale; CI-aware multi-repository delivery.
+  \item[\normalfont\textbf{Applied mathematics.}] Probability theory; Bernoulli and
+  Hoeffding bounds; maximum-likelihood estimation; the delta method and confidence-interval
+  construction; empirical model evaluation.
+  \item[\normalfont\textbf{Financial domains.}] M\&A Quality of Earnings; Canadian mortgage
+  underwriting (GDS/TDS, OSFI guidelines, stress testing); financial-document AI;
+  document-authenticity and fraud-signal detection.
+\end{description}
 
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\textwidth} >{\raggedright\arraybackslash}p{0.68\textwidth}}
-\textbf{Languages} & Python, TypeScript / JavaScript, Swift (iOS), SQL, Bash, \LaTeX \\
-\hline
-\textbf{Applied AI / LLMs} & LLM orchestration; Retrieval-Augmented Generation (Vertex AI RAG, corpus-per-workload, multi-query retrieval, dedup/ranking); structured extraction with calibrated confidence scoring; agentic workflows and multi-agent systems; process reward models; frontier-model evaluation (GPT-5, Claude Opus/Sonnet 4.6, Gemini 3.1 Pro); Anthropic, Google Vertex AI, and Gemini 2.0 Flash APIs \\
-\hline
-\textbf{Agentic systems} & Supervised-autonomy architectures; evidence-gated delivery pipelines; ticket-native state machines; acceptance-contract prompting; Playwright-based evidence capture; process supervision and watchdogs; safe automated Git operations \\
-\hline
-\textbf{Full-stack} & Next.js 16, React 19, TypeScript, Tailwind CSS v4, shadcn/ui; Supabase (PostgreSQL, Row-Level Security, Auth, Storage), Firebase, Sanity (headless CMS); Stripe, Resend, Twilio; SSE streaming, async job queues, webhook pipelines \\
-\hline
-\textbf{Cloud \& infrastructure} & Google Cloud Platform (Compute Engine, Cloud Storage, Vertex AI), Vercel; self-hosted Proxmox cluster, Docker, \texttt{systemd}, macOS \texttt{launchd}, Tailscale; CI-aware multi-repo delivery \\
-\hline
-\textbf{Applied math / research} & Probability theory, Bernoulli/Hoeffding bounds, maximum-likelihood estimation, the delta method, confidence-interval construction; empirical model evaluation \\
-\hline
-\textbf{Financial domains} & M\&A Quality of Earnings; Canadian mortgage underwriting (GDS/TDS, OSFI guidelines, stress testing); financial-document AI; document-authenticity and fraud-signal detection \\
-\end{longtable}
+% =====================================================================
+\section{Research Foundations: The Reliability of Agentic Reasoning}
+\label{sec:research}
+% =====================================================================
+The design of every agentic system I build follows from a result I proved in
+\emph{Uncertainty Propagation in Tree-Structured Language Model Reasoning}
+(\repo{uncertainty-propagation}). Model each step of an autonomous process as a Bernoulli
+trial with step-specific failure probability $\theta_i$.
 
-% ================= RESEARCH =================
-\section{Original Research Contribution}
-\subsection{Uncertainty Propagation in Tree-Structured Language Model Reasoning \quad\small\normalfont(\repo{uncertainty-propagation})}
-Single-author paper formalizing how per-step errors compound across multi-step LLM reasoning.
-Introduces the \textbf{Reasoning Tree Model (RTM)}, which unifies chain-of-thought, self-consistency,
-and tree-of-thought as special cases, and derives the governing results from first principles:
+\begin{theorem}[Chain success]
+For an $n$-step reasoning chain $\mathcal{C}_n$ with conditionally independent steps,
+\[
+  \mathbb{P}(\textsc{correct}\mid \mathcal{C}_n,\boldsymbol{\theta}) \;=\; \prod_{i=1}^{n}(1-\theta_i).
+\]
+\end{theorem}
 
+\begin{corollary}[Exponential decay]
+With mean failure rate $\bar\theta$, $\;\mathbb{P}(\textsc{correct}) \le (1-\bar\theta)^n \le e^{-n\bar\theta}$.
+\end{corollary}
+
+The practical consequence is severe: a long, unsupervised agent run decays exponentially in
+reliability, so it \emph{cannot} be trusted to ship. The paper further proves that a
+$k$-ary, depth-$d$ \emph{tree} with majority aggregation decays only sub-exponentially in
+total compute, $\exp(-\Omega(N^{1-1/(d+1)}))$, and derives the compute-optimal branching
+factor and depth, together with maximum-likelihood estimators and delta-method confidence
+intervals for end-to-end success. Empirically, the model predicts observed accuracy to
+within $\sim$1\% across GPT-5, Claude Opus~4.6, Claude Sonnet~4.6, and Gemini~3.1~Pro; at a
+fixed $48$-step budget a chain succeeds $\approx 0.2\%$ of the time while a depth-3 tree
+succeeds $97.9\%$.
+
+This yields the engineering principle that organizes the rest of this portfolio.
+
+\begin{principle}[Supervised, tree-structured autonomy]
+Do not ship from one long autonomous chain. Decompose work into short, independently
+verified units; aggregate across them with explicit checkpoints (validation, evidence,
+human review). Keep per-step failure low and let aggregation, not chain length, carry
+reliability.
+\end{principle}
+
+% =====================================================================
+\section{\textsc{Symphony}: A Supervised-Autonomy Delivery System}
+% =====================================================================
+\textsc{Symphony} (\repo{symphony}) is the clearest demonstration of my agentic-software
+engineering. It is a Jira-native, evidence-gated runner that takes a product ticket from
+backlog to a reviewed, evidence-backed pull request, with a human as the sole approval
+authority. I designed and built it as CTO of Finsider, where it runs live against a
+multi-repository codebase. It is a $\sim$2{,}300-line, standard-library Python orchestrator
+--- no agent framework --- chosen for auditability and portability.
+
+\paragraph{Architecture.} The system treats the coding agent as a capable but unprivileged
+developer: it may implement, validate, and produce evidence, but never holds approval
+authority. Its defining properties:
 \begin{itemize}
-  \item \textbf{Chain success} $=\prod_i (1-\theta_i)$, decaying exponentially in depth (Theorem~3.1).
-  \item \textbf{Tree majority vote} decays only \emph{sub}-exponentially in compute, $\exp(-\Omega(N^{1-1/(d+1)}))$ --- a qualitatively different reliability regime (Theorem~4.2).
-  \item Closed-form \textbf{compute-optimal branching factor and depth} (Theorem~4.3); MLE for step-failure rates with delta-method confidence intervals on end-to-end success (Theorems~5.1--5.2).
-  \item \textbf{Empirical validation} against GPT-5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro on GSM8K, MATH, and MMLU-Pro: predictions track observed accuracy to within \textbf{$\sim$1\% mean absolute error}. Signature result: at a fixed 48-step compute budget, a chain succeeds $\approx 0.2\%$ of the time while a depth-3 tree succeeds \textbf{97.9\%}.
-\end{itemize}
-This research is the design theory behind the production systems below: decompose work into short,
-independently verified, tree-structured units rather than one long, exponentially decaying chain.
-
-% ================= FLAGSHIP SYSTEMS =================
-\section{Flagship Systems}
-
-\subsection{Symphony --- autonomous software-delivery runner \quad\small\normalfont(\repo{symphony})}
-A Jira-native, evidence-gated, supervised-autonomy runner that drives a product ticket from backlog
-to a reviewed, evidence-backed pull request. \textbf{Built as CTO of Finsider and deployed live in
-its engineering environment.} $\sim$2{,}300-line standard-library Python orchestrator.
-\begin{itemize}
-  \item \textbf{Jira as the state machine} --- ticket status and labels are the control flow; no external queue or database; crash-safe because state is re-derived from Jira each poll.
-  \item \textbf{Per-ticket isolated Git workspaces}; acceptance-contract prompting of a coding agent; \textbf{Playwright} screenshot/video evidence capture.
-  \item \textbf{Intent-classified human review} (question vs.\ rework vs.\ approval); \textbf{cross-repo scope critic}; \textbf{evidence-integrity gating}; \texttt{--force-with-lease} safe Git; recursive process-tree cleanup; bounded failure auto-retry.
-  \item Dual deployment: macOS \texttt{launchd} (local) and an always-on GCP Compute Engine VM under \texttt{systemd}.
-\end{itemize}
-
-\subsection{Macintosh --- multi-agent engineering operating system \quad\small\normalfont(\repo{macintosh})}
-A reproducible, self-hosted ``engineering OS'': a six-stage agentic coding pipeline
-(Plan\,$\rightarrow$\,Code\,$\rightarrow$\,Test\,$\rightarrow$\,QA\,$\rightarrow$\,Review\,$\rightarrow$\,Ship)
-implemented as Claude Code skills atop the Superpowers discipline; a unified four-agent setup
-(Claude Code, Codex, Gemini, OpenCode) sharing context; a Personal Knowledge Brain (Obsidian + LLM
-compiler); and a Proxmox/Docker homelab with a Kali AI node and a human-gated approval model.
-
-% ================= AI PLATFORMS =================
-\section{AI Platforms --- Airbank \quad\small\normalfont(\repo{airbank}, \repo{airbank-mortgage-platform})}
-
-\subsection{Quality-of-Earnings engine}
-An 11-section, RAG-grounded extraction pipeline producing analyst-grade QoE workbooks where every
-number is traceable to a source document.
-\begin{itemize}
-  \item Corpus-per-workbook Vertex AI RAG with parallel multi-query retrieval and content-fingerprint dedup; hybrid \emph{discovery mode} (fuzzy anchor-row matching + free row discovery) robust to non-standard financial statements.
-  \item Audit-quality citation (document, page, verbatim excerpt per cell); calibrated confidence (0.4--1.0) engineered to \emph{flag missing data rather than fabricate}; deterministic fast path that bypasses RAG for clean spreadsheets.
-  \item Cross-section reconciliation via a formula resolver; live SSE analysis streaming.
-\end{itemize}
-
-\subsection{Mortgage underwriting platform}
-Full-lifecycle AI origination for Canadian brokers: Canadian-specific document extraction (T4, NOA,
-pay-stub, LOE), \textbf{fraud-signal detection} (PDF metadata, font inconsistency, name/income
-mismatch), GDS/TDS engine with stress-test rate, one-call intake orchestration, real-time upload
-verification, and autonomous cron-driven pipeline orchestration generating role-aware priorities.
-
-% ================= PRODUCTS =================
-\section{Selected Products}
-\begin{itemize}
-  \item \textbf{VisionClaw} (\repo{VisionClaw}) --- real-time AI vision assistant for Meta Ray-Ban glasses (Swift/SwiftUI, Meta Wearables DAT SDK, Gemini Live over WebSocket). Accessibility-first: hands-free Siri activation, resilient streaming, proactive spatial narration for visually impaired users.
-  \item \textbf{ROGI} (\repo{rogi}, \repo{rogi-v2}) --- AI-native mortgage intake funnel with a Canadian qualification engine (GDS/TDS, stress test, CMHC brackets). First version sold for \$7{,}500.
-  \item \textbf{Nassau} (\repo{nassau}) --- complete golf e-commerce platform built from scratch: Next.js + Sanity headless CMS + Stripe payments + Firebase + React Query, with premium product UX.
-  \item \textbf{Sacred Secretion Agent} (\repo{sacred-secretion-agent}) --- fully autonomous lunar-cycle email agent (local astronomical computation, trigger-based sequencing, Vercel cron).
-  \item Additional: \textbf{ventureroadmap}, \repo{nodebase}, \repo{ratestore}, \repo{OpenCV} (real-time hand-tracking), \repo{human-divinity} (second long-form research manuscript).
-\end{itemize}
-
-% ================= ITINERARY =================
-\section{Itinerary --- Roles, Projects \& Technical Objectives}
-\textit{Primary location of work: Toronto, Ontario, Canada (Antler Canada / OneEleven, 325 Front St W).}
-
-\subsection{Co-founder \& CEO --- Flagpost AI Inc. \quad\small\normalfont(Sep 2025 -- Q1 2026)}
-\begin{itemize}
-  \item Selected into the \textbf{Antler Canada TOR8 residency} (commenced Sep 2025) from thousands of applicants; passed the Antler Investment Committee.
-  \item \textbf{Funding milestone:} raised \$230{,}000 at a \$2.3M valuation via a SAFE from Antler Canada Fund I, L.P.; incorporated Flagpost AI Inc.\ (Nov 2025).
-  \item \textbf{Duties:} company formation, team and cap-table structure, product direction (AI-native sell-side M\&A preparation), investor relations.
-  \item \textbf{Outcome:} stepped aside to pursue the broader M\&A-intelligence thesis directly.
-\end{itemize}
-
-\subsection{Founder --- Airbank \quad\small\normalfont(Q1 2026)}
-\begin{itemize}
-  \item \textbf{Technical objectives:} design and ship an AI-native operating system for M\&A, beginning with the Quality-of-Earnings wedge; build the QoE and mortgage-underwriting platforms above.
-  \item \textbf{Product development phases:} RAG ingestion $\rightarrow$ section-wise extraction with confidence flags $\rightarrow$ auditable source-linked cells $\rightarrow$ reconciliation/export; mortgage intake $\rightarrow$ AI verification $\rightarrow$ underwriting audit $\rightarrow$ pipeline orchestration.
-  \item \textbf{Customer acquisition:} secured signed LOIs, NDAs, and advisory agreements with senior professionals across private credit, M\&A advisory, investment banking, and private equity (design-partner network).
-\end{itemize}
-
-\subsection{Chief Technology Officer --- Finsider \quad\small\normalfont(2026 -- Present)}
-\begin{itemize}
-  \item \textbf{Compensation:} \$200{,}000 annual salary (CTO) --- remuneration materially above the norm for the role and tenure.
-  \item \textbf{Technical objectives:} automate Quality of Earnings end-to-end; own the multi-repo platform (frontend, backend engine, AI/agent services) and the financial-correctness layer (Balance Sheet, P\&L, Cash Flow, Cash Proof tie-out and standardized export).
-  \item \textbf{Signature deliverable:} designed and deployed \textbf{Symphony} (above) as the company's agentic delivery infrastructure.
-  \item \textbf{Forward plan (petition period):} (1) harden and scale the QoE automation engine and agentic delivery pipeline; (2) expand financial-statement correctness and export coverage; (3) grow enterprise/customer adoption of the automated QoE product; (4) advance the supervised-autonomy research-to-production loop.
+  \item \textbf{Jira as the state machine.} Ticket status and labels \emph{are} the control
+  flow; there is no external queue or database. Because state is re-derived from Jira on
+  every poll, the daemon is crash-safe and losslessly resumable --- a direct application of
+  the ``keep each step verifiable'' principle.
+  \item \textbf{Per-ticket isolation.} Each ticket runs in an isolated Git workspace on its
+  own branch, with pinned commit identity and evidence excluded from history.
+  \item \textbf{Acceptance contracts.} Acceptance criteria are parsed from the ticket and
+  injected into the agent prompt as an explicit verification checklist.
+  \item \textbf{Evidence gating.} No ticket reaches review, and no pull request is created,
+  without \textsc{Playwright}-captured screenshots/video of the running result, integrity-
+  checked against minimum-size thresholds to reject empty or synthetic ``evidence.''
+  \item \textbf{Intent-classified human review.} Reviewer comments are classified
+  (question vs.\ rework vs.\ approval vs.\ neutral), so the loop answers questions in place
+  and re-runs the agent only on genuine change requests.
+  \item \textbf{Cross-repo scope critic.} The system detects when a ticket requires changes
+  across multiple repositories and blocks review if coverage is incomplete.
+  \item \textbf{Safety by construction.} \texttt{-{}-force-with-lease} only; recursive
+  process-tree cleanup and a dev-server watchdog; bounded failure auto-retry with cooldown;
+  a single-instance file lock.
+  \item \textbf{Two deployment targets.} macOS \texttt{launchd} for local operation and an
+  always-on GCP Compute Engine VM under \texttt{systemd} for production.
 \end{itemize}
 
-% ================= EDUCATION =================
+\paragraph{The invariant.} The controls compose to a single guarantee: \textsc{Symphony}
+can never merge code, never force-clobber a branch, never advance unverified work, and never
+fail silently. The maximum blast radius of any malfunction is a clearly labeled, un-merged
+draft pull request plus a notification --- exactly the property required of an autonomous
+system pointed at production. The full engineering record (architecture, state machine,
+hardening, deployment, security, and sanitized reference interfaces) is published at
+\repo{symphony}.
+
+% =====================================================================
+\section{A Portfolio of Agentic and AI Systems}
+% =====================================================================
+
+\paragraph{Airbank --- Quality-of-Earnings engine
+(\repo{airbank}).} An eleven-section, RAG-grounded extraction pipeline that produces
+analyst-grade M\&A Quality-of-Earnings workbooks in which every figure is traceable to a
+source document. It applies Principle~1 to document AI: rather than one long extraction
+pass, each section is an independently verified unit with calibrated confidence, audit-grade
+citation (document, page, verbatim excerpt), and a policy of flagging missing data rather
+than fabricating it; a deterministic path bypasses retrieval for clean spreadsheets, and a
+formula resolver reconciles cross-section dependencies over a live SSE stream.
+
+\paragraph{Airbank --- mortgage underwriting
+(\repo{airbank-mortgage-platform}).} Full-lifecycle AI origination for Canadian brokers:
+Canadian-specific document extraction (T4, NOA, pay-stub, LOE); \emph{fraud-signal
+detection} via PDF-metadata, font-consistency, and name/income cross-checks; a GDS/TDS
+engine with stress-test rate; one-call intake orchestration; real-time upload verification;
+and an autonomous, cron-driven pipeline agent that generates role-aware priorities across a
+live deal pipeline.
+
+\paragraph{Macintosh --- a multi-agent engineering operating system
+(\repo{macintosh}).} A reproducible, self-hosted environment that lets one engineer ship
+like a team: a six-stage agentic coding pipeline expressed as Claude Code skills; four
+coding agents (Claude Code, Codex, Gemini, OpenCode) sharing one context; a Personal
+Knowledge Brain (Obsidian + an LLM compiler) for persistent memory; and a Proxmox/Docker
+homelab with a human-gated approval model.
+
+\paragraph{VisionClaw --- a real-time multimodal agent
+(\repo{VisionClaw}).} An accessibility-first iOS agent (Swift/SwiftUI, Meta Wearables DAT
+SDK, Gemini Live over WebSocket) that streams video from Meta Ray-Ban glasses and
+proactively narrates the world for visually impaired users, with hands-free activation and
+resilient session recovery.
+
+\paragraph{Further systems.} \textbf{ROGI} (\repo{rogi}), an AI-native mortgage-intake
+funnel with a Canadian qualification engine (first version sold for \$7{,}500);
+\textbf{Sacred Secretion Agent} (\repo{sacred-secretion-agent}), a fully autonomous
+scheduling/email agent; \textbf{Nassau} (\repo{nassau}), a complete e-commerce platform
+built from scratch (Next.js, Sanity CMS, Stripe, Firebase); and a second research
+manuscript (\repo{human-divinity}).
+
+% =====================================================================
+\section{Itinerary: Roles, Milestones, and Technical Objectives}
+% =====================================================================
+\noindent\emph{Primary location of work: Toronto, Ontario, Canada (Antler Canada / OneEleven,
+325 Front St W).}
+
+\subsection{Co-founder \& CEO --- Flagpost AI Inc.\ (Sep 2025 -- Q1 2026)}
+\begin{itemize}
+  \item Selected into the Antler Canada TOR8 residency (commenced Sep 2025) and passed the
+  Antler Investment Committee.
+  \item \textit{Funding milestone:} raised \$220{,}000 at a \$2.2M valuation via a SAFE from
+  Antler Canada Fund~I, L.P.; incorporated Flagpost AI Inc.\ (Nov 2025).
+  \item \textit{Duties:} company formation, team and cap-table structure, product direction
+  (AI-native sell-side M\&A preparation), and investor relations.
+  \item \textit{Outcome:} stepped aside to pursue the broader M\&A-intelligence thesis.
+\end{itemize}
+
+\subsection{Founder --- Airbank (Q1 2026)}
+\begin{itemize}
+  \item \textit{Technical objectives:} design an AI-native operating system for M\&A,
+  beginning with the Quality-of-Earnings wedge; build the QoE and mortgage platforms above.
+  \item \textit{Development phases:} RAG ingestion $\rightarrow$ section-wise extraction with
+  confidence flags $\rightarrow$ auditable source-linked cells $\rightarrow$
+  reconciliation/export; mortgage intake $\rightarrow$ AI verification $\rightarrow$
+  underwriting audit $\rightarrow$ pipeline orchestration.
+  \item \textit{Customer acquisition:} signed LOIs, NDAs, and advisory agreements with
+  senior professionals across private credit, M\&A advisory, investment banking, and private
+  equity.
+\end{itemize}
+
+\subsection{Chief Technology Officer --- Finsider (2026 -- Present)}
+\begin{itemize}
+  \item \textit{Compensation:} \$200{,}000 annual salary --- materially above the norm for
+  the role and tenure.
+  \item \textit{Technical objectives:} automate Quality of Earnings end-to-end; own the
+  multi-repository platform (frontend, backend engine, AI/agent services) and the
+  financial-correctness layer (Balance Sheet, P\&L, Cash Flow, and Cash Proof tie-out with
+  standardized export).
+  \item \textit{Signature deliverable:} designed and deployed \textsc{Symphony} as the
+  company's agentic delivery infrastructure.
+  \item \textit{Forward plan (petition period):} (i)~harden and scale the QoE automation and
+  agentic delivery pipeline; (ii)~extend financial-statement correctness and export
+  coverage; (iii)~grow enterprise adoption of the automated QoE product; (iv)~advance the
+  supervised-autonomy research-to-production loop.
+\end{itemize}
+
+% =====================================================================
 \section{Education}
-\textbf{Queen's University} --- Computer Science. Left to build full-time after raising venture funding.
+% =====================================================================
+\textbf{Queen's University} --- Computer Science. Left to build full-time after raising
+venture funding.
 
-% ================= REPO INDEX =================
-\section{Repository Index}
-All systems referenced are public unless marked private.
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.64\textwidth}}
-\textbf{Portfolio (this overview)} & \repo{portfolio} \\
-\textbf{Symphony} & \repo{symphony} \\
-\textbf{Macintosh (engineering OS)} & \repo{macintosh} \\
-\textbf{Research --- reasoning} & \repo{uncertainty-propagation} \\
-\textbf{Research --- manuscript} & \repo{human-divinity} \\
-\textbf{Airbank QoE} & \repo{airbank} \;\textit{(private)} \\
-\textbf{Airbank Mortgage} & \repo{airbank-mortgage-platform} \;\textit{(private)} \\
-\textbf{ROGI} & \repo{rogi} \;\textbar\; \repo{rogi-v2} \\
-\textbf{VisionClaw} & \repo{VisionClaw} \\
-\textbf{Nassau} & \repo{nassau} \\
-\textbf{Sacred Secretion Agent} & \repo{sacred-secretion-agent} \\
-\textbf{Other} & \repo{nodebase} \;\textbar\; \repo{ratestore} \;\textbar\; \repo{OpenCV} \\
-\end{longtable}
+% =====================================================================
+\section*{Repository Index}
+\addcontentsline{toc}{section}{Repository Index}
+% =====================================================================
+\begin{itemize}
+  \item \textbf{Portfolio (this overview):} \repo{portfolio}
+  \item \textbf{\textsc{Symphony}:} \repo{symphony}
+  \item \textbf{Macintosh (engineering OS):} \repo{macintosh}
+  \item \textbf{Research --- reasoning reliability:} \repo{uncertainty-propagation}
+  \item \textbf{Research --- manuscript:} \repo{human-divinity}
+  \item \textbf{Airbank QoE} (private)\textbf{:} \repo{airbank}
+  \item \textbf{Airbank Mortgage} (private)\textbf{:} \repo{airbank-mortgage-platform}
+  \item \textbf{ROGI:} \repo{rogi} \;\textbar\; \repo{rogi-v2}
+  \item \textbf{VisionClaw:} \repo{VisionClaw}
+  \item \textbf{Nassau:} \repo{nassau}
+  \item \textbf{Sacred Secretion Agent:} \repo{sacred-secretion-agent}
+  \item \textbf{Other:} \repo{nodebase} \;\textbar\; \repo{ratestore} \;\textbar\; \repo{OpenCV}
+\end{itemize}
 
-\vfill
-{\color{steel}\footnotesize Prepared \today. Sensitive investor, customer, and financial specifics
-are maintained in a private data room available on request.}
+\vspace{6pt}
+\noindent\footnotesize\textit{Prepared \today. Curriculum vitae appended. Sensitive investor,
+customer, and financial specifics are maintained in a private data room available on request.}
 
 \end{document}

@@ -12,7 +12,7 @@ A compressed timeline of company‑building in AI — from an Antler‑backed fo
 ## Flagpost AI Inc. — Co‑founder & CEO (Antler Canada)
 *Incorporated November 2025 · Toronto, Canada*
 
-Flagpost was built inside the **Antler Canada residency (TOR8 cohort)** — Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised $230,000 at a $2.3M valuation**, anchored by a **SAFE from Antler Canada Fund I, L.P.** — at age 19.
+Flagpost was built inside the **Antler Canada residency (TOR8 cohort)** — Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised $220,000 at a $2.2M valuation**, anchored by a **SAFE from Antler Canada Fund I, L.P.** — at age 19.
 
 - Passed the Antler Investment Committee and onboarded into the residency cohort.
 - Built the founding team, corporate structure (cap table, shareholder agreement, reverse‑vesting, stock option plan, IP assignment), and banking.

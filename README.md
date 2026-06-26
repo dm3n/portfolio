@@ -13,7 +13,7 @@ I'm Daniel Edgar. I'm **20 years old**, the **Chief Technology Officer of [Finsi
 
 I studied **Computer Science at Queen's University** — one of Canada's top engineering schools — then left to build. Before I was 20, I had:
 
-- **Raised $230,000 at a $2.3M valuation**, selected by **Antler Canada** out of thousands of applicants, as Co‑founder & CEO of **Flagpost AI**.
+- **Raised $220,000 at a $2.2M valuation**, selected by **Antler Canada** out of thousands of applicants, as Co‑founder & CEO of **Flagpost AI**.
 - **Stepped aside from my own funded company** to chase a bigger thesis — an AI‑native operating system for M&A — and founded **Airbank**, where I designed and shipped production platforms for Quality‑of‑Earnings and mortgage underwriting.
 - **Joined [Finsider](https://finsider.ai) as full‑time CTO on a $200K salary**, automating Quality‑of‑Earnings — the mandatory, six‑figure financial diligence behind every M&A deal.
 
