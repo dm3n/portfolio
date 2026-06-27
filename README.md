@@ -21,7 +21,7 @@ Along the way I have:
 
 - **Designed and shipped production AI platforms** that turn messy financial documents into auditable, source‑linked analysis — for M&A Quality‑of‑Earnings and Canadian mortgage underwriting.
 - **Built [Symphony](https://github.com/dm3n/symphony)** — a Jira‑native autonomous software‑development runner deployed live at Finsider that drives product tickets all the way to evidence‑backed, human‑reviewed pull requests. It is supervised‑autonomy infrastructure: the tooling that builds the product.
-- **Written original research** — a single‑author paper formalizing how errors propagate through multi‑step LLM reasoning, with theory confirmed to **~1% error** against **GPT‑5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro**, and a headline result that reframes how to spend inference compute.
+- **Written original research** — two single‑author papers. The first formalizes how errors propagate through multi‑step LLM reasoning, with theory confirmed to **~1% error** against **GPT‑5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro**, and a headline result that reframes how to spend inference compute. The second, **The Information‑Maintenance Hypothesis**, argues that aging, intelligence, and markets are one problem in information theory, anchored on two theorems (Landauer's principle and the Kelly–Cover identity).
 - **Engineered my own "engineering OS"** — a multi‑agent coding pipeline, persistent knowledge brain, and self‑hosted homelab — that lets one person ship like a team.
 - **Built full products from scratch across the stack** — from a complete e‑commerce platform with payments and a headless CMS, to an accessibility AI that narrates the world through smart glasses.
 
@@ -41,6 +41,7 @@ The throughline: I don't just *use* AI — I **formalize the theory, design the 
 | 06 | [Projects Portfolio](docs/06-projects-portfolio.md) | Shipped products: ROGI, VisionClaw (accessibility AI on Meta glasses), and more. |
 | 07 | [The Engineering OS — "Macintosh"](docs/07-engineering-os-macintosh.md) | The multi‑agent pipeline + knowledge brain + homelab that powers the velocity. |
 | 08 | [O‑1A Evidence Map](docs/08-o1a-evidence-map.md) | How this body of work maps to the extraordinary‑ability criteria (for counsel). |
+| 09 | [Research — The Information‑Maintenance Hypothesis](docs/09-research-information-maintenance.md) | Second single‑author paper: aging, intelligence, and markets as one information‑theoretic problem, anchored on two theorems. |
 
 ---
 
@@ -51,6 +52,9 @@ A ~2,300‑line Python orchestrator that drives Jira tickets to draft PRs: isola
 
 ### Uncertainty Propagation in Tree‑Structured LLM Reasoning *(independent research)*
 Proves chain success `= ∏(1−θᵢ)` decays exponentially while majority‑vote trees decay only *sub*‑exponentially; derives the compute‑optimal tree shape; validates to ~1% MAE across four frontier models. Signature result: at a fixed 48‑step budget, a chain ≈ 0.2% success vs a depth‑3 tree at 97.9%. → [Paper writeup](docs/01-research-uncertainty-propagation.md) · [`uncertainty-propagation`](https://github.com/dm3n/uncertainty-propagation)
+
+### The Information‑Maintenance Hypothesis *(independent research)*
+A single‑author theory paper arguing that aging, intelligence, and markets are the same problem: maintaining a low‑entropy predictive model against entropy at a free‑energy cost. Anchored on two theorems, not analogies, **Landauer's principle** (`k_B T ln 2` per maintained bit) and the **Kelly–Cover identity** (`ΔW = I(X;Y)`, capital growth equals mutual information with the future); closes with eleven falsifiable predictions across biology, AI, and finance. → [Paper writeup](docs/09-research-information-maintenance.md) · [`information-maintenance-hypothesis`](https://github.com/dm3n/information-maintenance-hypothesis)
 
 ### Airbank QoE & Mortgage platforms *(Airbank, Founder)*
 RAG‑grounded, section‑by‑section financial extraction with calibrated confidence and source‑linked auditable cells; Canadian mortgage document extraction with fraud‑signal detection and autonomous lifecycle orchestration. → [Architecture](docs/03-airbank-platforms.md)
@@ -68,7 +72,8 @@ Hands‑free, resilient, accessibility‑first assistant that narrates the world
 
 **Research**
 - [`uncertainty-propagation`](https://github.com/dm3n/uncertainty-propagation) — single‑author paper on LLM reasoning reliability (LaTeX)
-- [`human-divinity`](https://github.com/dm3n/human-divinity) — second long‑form research manuscript (LaTeX)
+- [`information-maintenance-hypothesis`](https://github.com/dm3n/information-maintenance-hypothesis) — single‑author theory paper unifying aging, intelligence, and markets via information theory (LaTeX)
+- [`human-divinity`](https://github.com/dm3n/human-divinity) — long‑form research manuscript (LaTeX)
 
 **AI platforms & products**
 - [`airbank`](https://github.com/dm3n/airbank) — Airbank QoE Platform: M&A Quality‑of‑Earnings automation *(private)*
