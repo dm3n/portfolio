@@ -1,4 +1,4 @@
-# Research — The Information-Maintenance Hypothesis
+# Research: The Information-Maintenance Hypothesis
 
 > **Single-author paper.** Daniel Ray Edgar, June 2026.
 > Repository: [`dm3n/information-maintenance-hypothesis`](https://github.com/dm3n/information-maintenance-hypothesis) · written in LaTeX.
@@ -21,9 +21,9 @@ Two of the three bridges (mind and money) are exact theorems; the third (biology
 
 ## 3. The three pillars
 
-- **Life — aging as information loss.** Aging is accompanied by a measurable increase in epigenetic and transcriptional entropy (literal Shannon entropy), and because the digital genome is preserved, partial reprogramming can recover the lost analog information, error-correction against a backup. Aging reframed as a recoverable information-maintenance failure.
-- **Mind — intelligence as compression.** A language model's cross-entropy loss *is* the bit-length of what it compresses (an exact equality, not a metaphor); scaling laws are empirical compression curves; the brain's predictive coding is the same principle. Intelligence is the work of building a maximally compressed predictive model and not paying to carry anything else.
-- **Money — markets as information aggregation.** Prices compress dispersed private knowledge (Hayek); markets are necessarily lossy compressors that must leave residual exploitable information to fund their own computation (Grossman–Stiglitz); and capital growth equals an information rate (Kelly–Cover).
+- **Life: aging as information loss.** Aging is accompanied by a measurable increase in epigenetic and transcriptional entropy (literal Shannon entropy), and because the digital genome is preserved, partial reprogramming can recover the lost analog information, error-correction against a backup. Aging reframed as a recoverable information-maintenance failure.
+- **Mind: intelligence as compression.** A language model's cross-entropy loss *is* the bit-length of what it compresses (an exact equality, not a metaphor); scaling laws are empirical compression curves; the brain's predictive coding is the same principle. Intelligence is the work of building a maximally compressed predictive model and not paying to carry anything else.
+- **Money: markets as information aggregation.** Prices compress dispersed private knowledge (Hayek); markets are necessarily lossy compressors that must leave residual exploitable information to fund their own computation (Grossman–Stiglitz); and capital growth equals an information rate (Kelly–Cover).
 
 ## 4. The unification and the predictions
 

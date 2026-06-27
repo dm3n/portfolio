@@ -1,53 +1,53 @@
 # Ventures & Trajectory
 
-A compressed timeline of company‑building in AI — from an Antler‑backed founder/CEO, to a bridge venture in M&A AI, to a full‑time CTO role at a funded fintech — **all before the age of 21.**
+A compressed timeline of company‑building in AI: from an Antler‑backed founder/CEO, to a bridge venture in M&A AI, to a full‑time CTO role at a funded fintech, **all before the age of 21.**
 
 ## Education
-**Queen's University — Computer Science.** Queen's runs one of Canada's most competitive engineering programs. Daniel left to build full‑time after raising venture funding (below). Founders who leave top CS programs to run funded companies are exactly the profile the O‑1A "extraordinary ability" standard is designed for.
+**Queen's University: Computer Science.** Queen's runs one of Canada's most competitive engineering programs. Daniel left to build full‑time after raising venture funding (below). Founders who leave top CS programs to run funded companies are exactly the profile the O‑1A "extraordinary ability" standard is designed for.
 
 > Note: granular investor, customer, and contractual specifics live in a private data room available to counsel on request (see end of page). The headline funding, valuation, and compensation figures below are included at the applicant's direction as evidence of traction and remuneration.
 
 ---
 
-## Flagpost AI Inc. — Co‑founder & CEO (Antler Canada)
+## Flagpost AI Inc.: Co‑founder & CEO (Antler Canada)
 *Incorporated November 2025 · Toronto, Canada*
 
-Flagpost was built inside the **Antler Canada residency (TOR8 cohort)** — Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised $220,000 at a $2.2M valuation**, anchored by a **SAFE from Antler Canada Fund I, L.P.** — at age 19.
+Flagpost was built inside the **Antler Canada residency (TOR8 cohort)**: Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised $220,000 at a $2.2M valuation**, anchored by a **SAFE from Antler Canada Fund I, L.P.**, at age 19.
 
 - Passed the Antler Investment Committee and onboarded into the residency cohort.
 - Built the founding team, corporate structure (cap table, shareholder agreement, reverse‑vesting, stock option plan, IP assignment), and banking.
-- Product direction: AI‑native automation for the sell‑side of M&A — preparing companies to be acquisition‑ready.
+- Product direction: AI‑native automation for the sell‑side of M&A, preparing companies to be acquisition‑ready.
 - **Outcome:** Daniel stepped down as CEO to pursue the M&A‑intelligence thesis directly (Airbank) and subsequently to take a full‑time CTO role at Finsider.
 
 **Evidence available:** Antler acceptance/offer package, SAFE + Side Letter, cohort announcement, Antler residency publication, certificate & articles of incorporation, cap table, pitch deck.
 
 ---
 
-## Airbank — Founder (bridge venture in M&A AI)
+## Airbank: Founder (bridge venture in M&A AI)
 *The connective venture between Flagpost and Finsider.*
 
 Airbank is the venture where the core thesis crystallized: **an AI‑native operating system for M&A**, beginning with the wedge of **Quality‑of‑Earnings (QoE)** automation. Today a QoE engagement costs $25k–$250k and takes 6+ weeks; Airbank's systems ingest raw financials and produce defensible, source‑linked analysis in a fraction of the time.
 
 Under Airbank, Daniel designed and built a suite of production platforms (documented in [Airbank Platforms](03-airbank-platforms.md)):
 
-- **QoE Platform** — RAG over financial documents + section‑by‑section LLM extraction with confidence flags and auditable, source‑linked cells.
-- **Mortgage Platform** — AI underwriting & borrower qualification with an origination agent and document data room.
-- **M&A data‑room platform** — AI‑native diligence workspace.
+- **QoE Platform**: RAG over financial documents + section‑by‑section LLM extraction with confidence flags and auditable, source‑linked cells.
+- **Mortgage Platform**: AI underwriting & borrower qualification with an origination agent and document data room.
+- **M&A data‑room platform**: AI‑native diligence workspace.
 
-Airbank also assembled an advisory and design‑partner network spanning private credit, M&A advisory, investment banking, and PE — formalized through signed advisory agreements and letters of intent.
+Airbank also assembled an advisory and design‑partner network spanning private credit, M&A advisory, investment banking, and PE, formalized through signed advisory agreements and letters of intent.
 
 **Evidence available (data room):** signed LOIs and design‑partnership agreements, advisor agreements (with equity terms), customer/relationship roster, and traction materials.
 
 ---
 
-## Finsider — Chief Technology Officer (full‑time)
+## Finsider: Chief Technology Officer (full‑time)
 *[finsider.ai](https://finsider.ai)*
 
-Daniel joined **Finsider as full‑time CTO on a $200,000 salary — at age 20**, bringing the M&A‑AI thesis and the agentic‑systems expertise from Flagpost/Airbank into a funded, operating fintech with an existing product and customers. A $200K CTO compensation at 20 is itself O‑1A evidence of **high remuneration** (criterion 1.C): it materially exceeds the norm for the applicant's age and tenure and reflects the market's valuation of his extraordinary ability.
+Daniel joined **Finsider as full‑time CTO on a $200,000 salary, at age 20**, bringing the M&A‑AI thesis and the agentic‑systems expertise from Flagpost/Airbank into a funded, operating fintech with an existing product and customers. A $200K CTO compensation at 20 is itself O‑1A evidence of **high remuneration** (criterion 1.C): it materially exceeds the norm for the applicant's age and tenure and reflects the market's valuation of his extraordinary ability.
 
-The mandate: **automate Quality‑of‑Earnings** — the mandatory, six‑figure financial‑diligence report behind every M&A transaction — and build the platform and agentic infrastructure to do it at scale.
+The mandate: **automate Quality‑of‑Earnings**, the mandatory, six‑figure financial‑diligence report behind every M&A transaction, and build the platform and agentic infrastructure to do it at scale.
 
-As CTO, the headline technical contribution is **Symphony** — a Jira‑native autonomous software‑development runner that takes product tickets through implementation, evidence capture, human review, and pull‑request submission, deployed live in Finsider's active development environment. Full architecture: [Symphony](02-symphony-architecture.md). Finsider‑specific platform and product work is summarized in [Finsider CTO](04-finsider-cto.md).
+As CTO, the headline technical contribution is **Symphony**, a Jira‑native autonomous software‑development runner that takes product tickets through implementation, evidence capture, human review, and pull‑request submission, deployed live in Finsider's active development environment. Full architecture: [Symphony](02-symphony-architecture.md). Finsider‑specific platform and product work is summarized in [Finsider CTO](04-finsider-cto.md).
 
 ---
 
@@ -60,7 +60,7 @@ As CTO, the headline technical contribution is **Symphony** — a Jira‑native 
 | **Focus** | sell‑side M&A prep | M&A AI OS / QoE | financial AI platform + agentic dev |
 | **Signature build** | company + team + raise | QoE / mortgage / data‑room platforms | **Symphony** autonomous dev runner |
 
-The consistent thread is **applied AI systems for high‑stakes financial work** — and an unusual willingness to build the *tooling that builds the product* (Symphony, the engineering OS), not just the product itself.
+The consistent thread is **applied AI systems for high‑stakes financial work**, and an unusual willingness to build the *tooling that builds the product* (Symphony, the engineering OS), not just the product itself.
 
 ---
 

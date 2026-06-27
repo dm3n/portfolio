@@ -35,14 +35,14 @@
 \begin{abstract}
 \noindent
 This document is a technical overview of my work designing, building, and deploying
-\emph{agentic software systems} --- autonomous and semi-autonomous programs that plan,
+\emph{agentic software systems}: autonomous and semi-autonomous programs that plan,
 act, and verify their own work under engineered constraints. I am the Chief Technology
 Officer of Finsider, where I built and deployed \textsc{Symphony}, a supervised-autonomy
 software-delivery runner that drives product tickets to reviewed, evidence-backed pull
 requests. Before this I studied Computer Science at Queen's University, then raised
 \$220{,}000 at a \$2.2M valuation as co-founder and CEO of an Antler Canada--backed company
 at the age of 19, and authored single-author research formalizing the reliability of
-multi-step language-model reasoning --- validated against four frontier models to within
+multi-step language-model reasoning, validated against four frontier models to within
 roughly one percent of empirical accuracy. A second single-author paper, \emph{The
 Information-Maintenance Hypothesis}, argues that aging, intelligence, and markets are the
 same problem in information theory. The unifying thread of this portfolio is a
@@ -60,7 +60,7 @@ engineers treat separately: the \emph{theory} of why language-model systems fail
 \emph{systems} that exploit that theory in production, and the \emph{tooling} that lets a
 single engineer operate at the throughput of a team.
 
-The defining specialization is \emph{agentic software} --- programs that decompose a goal
+The defining specialization is \emph{agentic software}: programs that decompose a goal
 into steps, take real actions in the world (writing code, querying corpora, operating a
 browser, transacting), and judge the quality of their own output. Agentic systems are
 powerful and notoriously unreliable; the central engineering problem is making them
@@ -152,7 +152,7 @@ engineering. It is a Jira-native, evidence-gated runner that takes a product tic
 backlog to a reviewed, evidence-backed pull request, with a human as the sole approval
 authority. I designed and built it as CTO of Finsider, where it runs live against a
 multi-repository codebase. It is a $\sim$2{,}300-line, standard-library Python orchestrator
---- no agent framework --- chosen for auditability and portability.
+(no agent framework) chosen for auditability and portability.
 
 \paragraph{Architecture.} The system treats the coding agent as a capable but unprivileged
 developer: it may implement, validate, and produce evidence, but never holds approval
@@ -160,7 +160,7 @@ authority. Its defining properties:
 \begin{itemize}
   \item \textbf{Jira as the state machine.} Ticket status and labels \emph{are} the control
   flow; there is no external queue or database. Because state is re-derived from Jira on
-  every poll, the daemon is crash-safe and losslessly resumable --- a direct application of
+  every poll, the daemon is crash-safe and losslessly resumable, a direct application of
   the ``keep each step verifiable'' principle.
   \item \textbf{Per-ticket isolation.} Each ticket runs in an isolated Git workspace on its
   own branch, with pinned commit identity and evidence excluded from history.
@@ -184,7 +184,7 @@ authority. Its defining properties:
 \paragraph{The invariant.} The controls compose to a single guarantee: \textsc{Symphony}
 can never merge code, never force-clobber a branch, never advance unverified work, and never
 fail silently. The maximum blast radius of any malfunction is a clearly labeled, un-merged
-draft pull request plus a notification --- exactly the property required of an autonomous
+draft pull request plus a notification, exactly the property required of an autonomous
 system pointed at production. The full engineering record (architecture, state machine,
 hardening, deployment, security, and sanitized reference interfaces) is published at
 \repo{symphony}.
@@ -193,7 +193,7 @@ hardening, deployment, security, and sanitized reference interfaces) is publishe
 \section{A Portfolio of Agentic and AI Systems}
 % =====================================================================
 
-\paragraph{Airbank --- Quality-of-Earnings engine
+\paragraph{Airbank: Quality-of-Earnings engine
 (\repo{airbank}).} An eleven-section, RAG-grounded extraction pipeline that produces
 analyst-grade M\&A Quality-of-Earnings workbooks in which every figure is traceable to a
 source document. It applies Principle~1 to document AI: rather than one long extraction
@@ -202,7 +202,7 @@ citation (document, page, verbatim excerpt), and a policy of flagging missing da
 than fabricating it; a deterministic path bypasses retrieval for clean spreadsheets, and a
 formula resolver reconciles cross-section dependencies over a live SSE stream.
 
-\paragraph{Airbank --- mortgage underwriting
+\paragraph{Airbank: mortgage underwriting
 (\repo{airbank-mortgage-platform}).} Full-lifecycle AI origination for Canadian brokers:
 Canadian-specific document extraction (T4, NOA, pay-stub, LOE); \emph{fraud-signal
 detection} via PDF-metadata, font-consistency, and name/income cross-checks; a GDS/TDS
@@ -210,20 +210,20 @@ engine with stress-test rate; one-call intake orchestration; real-time upload ve
 and an autonomous, cron-driven pipeline agent that generates role-aware priorities across a
 live deal pipeline.
 
-\paragraph{Macintosh --- a multi-agent engineering operating system
+\paragraph{Macintosh: a multi-agent engineering operating system
 (\repo{macintosh}).} A reproducible, self-hosted environment that lets one engineer ship
 like a team: a six-stage agentic coding pipeline expressed as Claude Code skills; four
 coding agents (Claude Code, Codex, Gemini, OpenCode) sharing one context; a Personal
 Knowledge Brain (Obsidian + an LLM compiler) for persistent memory; and a Proxmox/Docker
 homelab with a human-gated approval model.
 
-\paragraph{VisionClaw --- a real-time multimodal agent
+\paragraph{VisionClaw: a real-time multimodal agent
 (\repo{VisionClaw}).} An accessibility-first iOS agent (Swift/SwiftUI, Meta Wearables DAT
 SDK, Gemini Live over WebSocket) that streams video from Meta Ray-Ban glasses and
 proactively narrates the world for visually impaired users, with hands-free activation and
 resilient session recovery.
 
-\paragraph{The Information-Maintenance Hypothesis --- a second research paper
+\paragraph{The Information-Maintenance Hypothesis: a second research paper
 (\repo{information-maintenance-hypothesis}).} A single-author theory paper arguing that
 three problems, why organisms age, what intelligence is, and how markets price the world,
 are one problem: maintaining a low-entropy predictive model against entropy at a
@@ -248,7 +248,7 @@ manuscript (\repo{human-divinity}).
 \noindent\emph{Primary location of work: Toronto, Ontario, Canada (Antler Canada / OneEleven,
 325 Front St W).}
 
-\subsection{Co-founder \& CEO --- Flagpost AI Inc.\ (Sep 2025 -- Q1 2026)}
+\subsection{Co-founder \& CEO: Flagpost AI Inc.\ (Sep 2025 -- Q1 2026)}
 \begin{itemize}
   \item Selected into the Antler Canada TOR8 residency (commenced Sep 2025) and passed the
   Antler Investment Committee.
@@ -259,7 +259,7 @@ manuscript (\repo{human-divinity}).
   \item \textit{Outcome:} stepped aside to pursue the broader M\&A-intelligence thesis.
 \end{itemize}
 
-\subsection{Founder --- Airbank (Q1 2026)}
+\subsection{Founder: Airbank (Q1 2026)}
 \begin{itemize}
   \item \textit{Technical objectives:} design an AI-native operating system for M\&A,
   beginning with the Quality-of-Earnings wedge; build the QoE and mortgage platforms above.
@@ -272,9 +272,9 @@ manuscript (\repo{human-divinity}).
   equity.
 \end{itemize}
 
-\subsection{Chief Technology Officer --- Finsider (2026 -- Present)}
+\subsection{Chief Technology Officer: Finsider (2026 -- Present)}
 \begin{itemize}
-  \item \textit{Compensation:} \$200{,}000 annual salary --- materially above the norm for
+  \item \textit{Compensation:} \$200{,}000 annual salary, materially above the norm for
   the role and tenure.
   \item \textit{Technical objectives:} automate Quality of Earnings end-to-end; own the
   multi-repository platform (frontend, backend engine, AI/agent services) and the
@@ -291,7 +291,7 @@ manuscript (\repo{human-divinity}).
 % =====================================================================
 \section{Education}
 % =====================================================================
-\textbf{Queen's University} --- Computer Science. Left to build full-time after raising
+\textbf{Queen's University}, Computer Science. Left to build full-time after raising
 venture funding.
 
 % =====================================================================
@@ -302,9 +302,9 @@ venture funding.
   \item \textbf{Portfolio (this overview):} \repo{portfolio}
   \item \textbf{\textsc{Symphony}:} \repo{symphony}
   \item \textbf{Macintosh (engineering OS):} \repo{macintosh}
-  \item \textbf{Research --- reasoning reliability:} \repo{uncertainty-propagation}
-  \item \textbf{Research --- information-maintenance hypothesis:} \repo{information-maintenance-hypothesis}
-  \item \textbf{Research --- manuscript:} \repo{human-divinity}
+  \item \textbf{Research, reasoning reliability:} \repo{uncertainty-propagation}
+  \item \textbf{Research, information-maintenance hypothesis:} \repo{information-maintenance-hypothesis}
+  \item \textbf{Research, manuscript:} \repo{human-divinity}
   \item \textbf{Airbank QoE} (private)\textbf{:} \repo{airbank}
   \item \textbf{Airbank Mortgage} (private)\textbf{:} \repo{airbank-mortgage-platform}
   \item \textbf{ROGI:} \repo{rogi} \;\textbar\; \repo{rogi-v2}
