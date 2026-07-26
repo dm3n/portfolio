@@ -1,159 +1,107 @@
-# Research: The Embodied Agency Hypothesis
+# Research: From Vision to Reality
 
 > **Single-author paper.** Daniel Ray Edgar, July 2026.
-> Repository: [`dm3n/embodied-agency-hypothesis`](https://github.com/dm3n/embodied-agency-hypothesis) · 26 pages · written in LaTeX.
+> Repository: [`dm3n/embodied-agency-hypothesis`](https://github.com/dm3n/embodied-agency-hypothesis) · 16 pages · written in LaTeX.
 
-This is a fourth piece of original, independent research. It begins with a thesis
-usually presented as a mixture of physiology, quantum language, manifestation, and
-spiritual tradition: the state of the human body changes the reality a person can
-access. The paper recovers the strongest defensible version of that idea, formalizes
-it, and submits every factual claim to an explicit evidence ladder.
+## The thesis
 
-The result is neither a credulous quantum manifesto nor a pure debunking exercise. It
-is a causal model of embodied agency, supported by research on bioelectric signaling,
-sleep, circadian state, metabolism, inflammation, food environments, attention,
-habits, expectation, imagery, implementation intentions, and contemplative practice.
-The paper then states exactly where the evidence ends.
+Every human-made reality exists twice: first as a representation in a mind, then as a
+physical arrangement produced through action.
 
-## 1. The thesis
-
-The paper distinguishes three meanings of reality:
-
-- **Ontic reality:** the world that exists independently of an agent's present
-  experience.
-- **Lived reality:** the subset of the world perceived, modeled, valued, and
-  experienced by that agent.
-- **Enacted future:** a later world state whose probability has been changed by the
-  agent's actions.
-
-Manifestation is defended in the third sense and partly in the second. Intention
-changes attention and policy selection. Biological state constrains which policies can
-be represented and reliably executed. Action changes the environment. Feedback updates
-the next cycle. The mind is powerful because, through a living body, it enters
-causality.
-
-## 2. The formal contribution
-
-For biological state `B_t`, environment `E_t`, execution threshold `rho`, and outcome
-threshold `epsilon`, the paper defines an executable policy set and the accessible
-future set:
+The paper explains that passage with one causal chain:
 
 ```text
-A_{epsilon,rho}(B_t,E_t)
-=
-{ y : there exists pi in Pi_rho(B_t,E_t)
-      such that P(y | do(pi), B_t, E_t) >= epsilon }.
+vision -> embodied state -> policy -> action -> physical change -> feedback
 ```
 
-Intention changes future probabilities through policy selection:
+Visualization can change the future when it changes what a person notices, expects,
+rehearses, and does. Biological state determines which policies can be executed
+reliably. Action changes the physical environment. Feedback improves the next attempt.
+The paper calls this process **embodied manifestation**.
+
+## Three planes
+
+The argument separates:
+
+- **Mental plane:** the image, goal, or model of a desired future.
+- **Embodied plane:** attention, expectation, physiology, skill, and action readiness.
+- **Physical plane:** observable behavior, artifacts, relationships, institutions, and
+  other world states.
+
+The mental plane becomes physically consequential through an embodied agent. *Astral
+visualization* is treated as a possible description of vivid symbolic or
+self-transcendent experience, not as an assumed physical substance.
+
+## Three proved results
+
+For visualization `V`, biological state `B`, environment `E`, policy `pi`, and outcome
+`Y`, the central identity is:
 
 ```text
-P(Y | I_t, B_t, E_t)
+P(Y | V,B,E)
 =
 sum over pi [
-  P(Y | do(pi), B_t, E_t) P(pi | I_t, B_t, E_t)
+  P(Y | do(pi),B,E) P(pi | V,B,E)
 ].
 ```
 
-The placement of each term is the thesis. Intention changes policy weights. Biology
-and environment constrain the support. Action carries the effect into the world.
+The paper proves:
 
-The paper proves two propositions inside this model:
+1. **Mediation theorem.** If visualization does not change policy or action, it does
+   not change an external outcome under the ordinary causal graph.
+2. **Reachable-future theorem.** An embodied state that enables more effective
+   policies expands the set of futures an agent can credibly reach.
+3. **Repetition theorem.** Across attempts with success probabilities `p_1,...,p_n`,
+   the probability of at least one success is
+   `1 - product_t(1-p_t)`. Better attempts and more attempts compound.
 
-1. **Mediator requirement.** When policy and downstream action are fixed, intention
-   does not change an external outcome under the ordinary causal graph.
-2. **Biological contraction.** Under stated assumptions, if an impaired biological
-   state removes executable policies, its accessible future set contracts.
+These are mathematical results inside an explicit model. They do not claim that
+thought alone controls shielded external systems.
 
-The mediator requirement is also a refutation condition. A reproducible effect of
-intention on a properly isolated external random process would falsify the ordinary
-graph and require a new mechanism.
+## Evidence and boundaries
 
-## 3. The evidence ladder
+The 52 cited sources span mental imagery, implementation intentions, placebo
+physiology, bioelectric signaling, sleep, circadian timing, hydration, metabolism,
+inflammation, food, habits, notifications, contemplative practice, quantum biology,
+and spiritual traditions.
 
-Every major assertion is classified as:
+The exact supplied copies of U.S. Patent 6,506,148 B2 and the 1983 Gateway memorandum
+are archived with the paper. The patent establishes that a low-frequency
+monitor-emission method was proposed, claimed, and granted. The Gateway memorandum
+establishes serious U.S. Army analysis of the Monroe framework and a recommendation
+for further experiments. Neither record is treated as independent experimental
+validation.
 
-- **Established:** mature physical theory or replicated causal evidence.
-- **Supported:** convergent evidence with material limits.
-- **Plausible:** a testable extrapolation not yet established.
-- **Interpretive:** phenomenological, philosophical, or theological meaning rather
-  than a laboratory result.
+The paper also distinguishes:
 
-This structure permits scientific and spiritual material to remain in one paper
-without being confused. Molecular quantum effects are established in specified
-biological reactions. A quantum cognitive computer is not. Kundalini and theosis are
-real textual and experiential traditions. A universal monthly cerebrospinal secretion
-is not established anatomy.
+- DNA charge transport from semantic DNA programming;
+- measurable cardiac fields from intention broadcasting;
+- molecular quantum effects from voluntary quantum timeline selection;
+- kundalini, alchemy, theosis, and Christ consciousness as interpretive maps from
+  unsupported universal anatomy;
+- spiritual practice from the unverified monthly sacred-secretion cycle.
 
-## 4. Direct audit of the source claims
+## Practical contribution
 
-The paper audits, with adjacent citations, claims concerning:
+The theory becomes a seven-step materialization protocol:
 
-- linguistic-wave genetics and semantic DNA programming;
-- DNA charge transport and the false code-versus-antenna dichotomy;
-- the heart's measurable picotesla magnetic field and the unsupported privileged
-  three-foot boundary;
-- human cell-count and neural-voltage numbers presented with false precision;
-- incompatible estimates of a whole-human processing rate;
-- molecular tunneling versus quantum cognition and timeline selection;
-- sleep, circadian disruption, hydration, inflammation, processed food, and the
-  gut-brain axis;
-- notifications, habits, recommendation systems, and commercial incentives;
-- placebo mechanisms, motor imagery, implementation intentions, and meditation;
-- alchemy, kundalini, Christian theosis, Christ consciousness, pineal DMT, and the
-  sacred-secretion claim.
+1. Specify the physical target.
+2. Visualize the process and identity.
+3. Convert vision into implementation intentions.
+4. Prepare the body.
+5. Design the environment.
+6. Act and produce evidence.
+7. Measure, learn, and repeat.
 
-Two public records receive special documentary analysis. U.S. Patent 6,506,148 B2
-claims a low-frequency monitor-emission method, but its specification describes
-subject-controlled observations and a subjective eyelid-ptosis response rather than a
-blinded, independently replicated trial. The 1983 U.S. Army memorandum *Analysis and
-Assessment of Gateway Process*, later released under a CIA archive number, shows
-institutional interest and proposes future experiments. Declassification establishes
-provenance and release status, not successful experimental validation.
+## Why this belongs in the portfolio
 
-The exact patent and Gateway PDFs are archived in the paper repository with SHA-256
-hashes so the document-type argument is auditable.
+The paper demonstrates first-principles synthesis across mathematics, neuroscience,
+biology, behavioral science, documentary analysis, and religious studies. It recovers
+a powerful idea from a hype-saturated discourse, gives the idea a formal causal model,
+proves what the model permits, marks what remains unsupported, and translates the
+result into practice.
 
-## 5. Falsifiable predictions
-
-The paper closes with seven predictions:
-
-1. Restoring disrupted sleep and circadian timing will expand measured policy
-   generation, feedback updating, and execution reliability for defined tasks.
-2. Implementation intentions plus environmental cue design will outperform outcome
-   visualization alone, with external effects mediated by action.
-3. Context changes and notification removal will reopen intentional control most for
-   people whose baseline behavior is cue-driven.
-4. Information-rate estimates will vary by orders of magnitude across sensory,
-   neural, motor, report, and behavioral levels, defeating a context-free global
-   bitrate.
-5. Semantic DNA programming will fail a blinded, multilaboratory test unless a
-   meaning-specific effect survives energy matching, translation, sham exposure, and
-   raw-data release.
-6. Longitudinal measurement will not reveal the asserted universal monthly
-   brain-to-sacrum-to-brain secretion cycle.
-7. Contemplative practice will change selected attention, regulation, and
-   self-transcendence measures through measurable mediators, but will not reliably
-   affect shielded random physical outcomes.
-
-Several are deliberately negative. They mark the boundary of the theory and create
-clear ways for future evidence to prove it wrong.
-
-## 6. Why this belongs in the portfolio
-
-The paper demonstrates the same first-principles behavior present across Daniel's
-technical work: begin with an emotionally charged, hype-saturated problem; separate
-measurement from model and interpretation; define the mechanism mathematically; expose
-the model to counterarguments; and commit to observations that could falsify it.
-
-It also demonstrates range. The first paper models reliability in language-model
-reasoning. The second develops an information-theoretic synthesis across aging,
-intelligence, and markets. The third analyzes the economics and limits of AI biological
-design. The fourth joins bioelectric regulation, cognitive state, agency, and spiritual
-interpretation while refusing to claim more than the evidence permits.
-
-> Bottom line: a self-taught founder authored a fourth independent research paper,
-> formalized the relationship between biological state and reachable futures, proved
-> two propositions, audited 56 scientific and documentary sources, preserved a serious
-> account of manifestation and human divinity without presenting unsupported mechanisms
-> as facts, and committed the theory to seven falsifiable predictions.
+> Bottom line: Daniel authored a concise formal theory of how a future first held in
+> the mind can become physical through a living agent. The 16-page paper contains
+> three theorems, two original diagrams, 52 cited sources, one claim-audit table, a
+> seven-step protocol, and seven falsifiable predictions.
