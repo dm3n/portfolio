@@ -21,7 +21,7 @@ Along the way I have:
 
 - **Designed and shipped production AI platforms** that turn messy financial documents into auditable, source‑linked analysis, for M&A Quality‑of‑Earnings and Canadian mortgage underwriting.
 - **Built [Symphony](https://github.com/dm3n/symphony)**: a Jira‑native autonomous software‑development runner deployed live at Finsider that drives product tickets all the way to evidence‑backed, human‑reviewed pull requests. It is supervised‑autonomy infrastructure: the tooling that builds the product.
-- **Written original research**: four single‑author papers. The first formalizes how errors propagate through multi‑step LLM reasoning, with theory confirmed to **~1% error** against **GPT‑5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro**. The second, **The Information‑Maintenance Hypothesis**, argues that aging, intelligence, and markets are one problem in information theory. The third, **From Reading to Writing the Genome**, argues that biology is inverting from a reading science into a writing one while drawing a hard molecule-versus-organism ceiling. The fourth, **From Vision to Reality**, proves three results in a causal model of how visualization becomes physical change through embodiment, policy, action, and feedback.
+- **Written original research**: four single‑author papers. The first formalizes how errors propagate through multi‑step LLM reasoning, with theory confirmed to **~1% error** against **GPT‑5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro**. The second, **The Information‑Maintenance Hypothesis**, argues that aging, intelligence, and markets are one problem in information theory. The third, **From Reading to Writing the Genome**, argues that biology is inverting from a reading science into a writing one while drawing a hard molecule-versus-organism ceiling. The fourth, **Alchemy**, proves four results in a causal model of how an imaginal form becomes material reality through embodiment, identity, policy, action, and feedback.
 - **Engineered my own "engineering OS"** (a multi‑agent coding pipeline, persistent knowledge brain, and self‑hosted homelab) that lets one person ship like a team.
 - **Built full products from scratch across the stack**: from a complete e‑commerce platform with payments and a headless CMS, to an accessibility AI that narrates the world through smart glasses.
 
@@ -43,7 +43,7 @@ The throughline: I don't just *use* AI, I **formalize the theory, design the sys
 | 08 | [O‑1A Evidence Map](docs/08-o1a-evidence-map.md) | How this body of work maps to the extraordinary‑ability criteria (for counsel). |
 | 09 | [Research: The Information‑Maintenance Hypothesis](docs/09-research-information-maintenance.md) | Second single‑author paper: aging, intelligence, and markets as one information‑theoretic problem, anchored on two theorems. |
 | 10 | [Research: From Reading to Writing the Genome](docs/10-research-ai-designed-life.md) | Third single‑author paper: biology's shift from reading to writing genomes, the cost‑per‑validated‑design economics of AI biological design, and the molecule‑versus‑organism ceiling. |
-| 11 | [Research: From Vision to Reality](docs/11-research-embodied-agency.md) | Fourth single-author paper: a formal theory of embodied manifestation with three proved theorems, a seven-step materialization protocol, and a bounded audit of bioelectric, quantum, patent, Gateway, and spiritual claims. |
+| 11 | [Research: Alchemy](docs/11-research-alchemy.md) | Fourth single-author paper: a formal theory of consciousness, embodiment, and materialization with four proved theorems, an eight-operation Great Work, and a disciplined synthesis of scientific, Gateway, patent, and inner-alchemy evidence. |
 
 ---
 
@@ -61,8 +61,8 @@ A single‑author theory paper arguing that aging, intelligence, and markets are
 ### From Reading to Writing the Genome *(independent research)*
 A single‑author paper arguing that molecular biology is inverting from a *reading* science into a *writing* one: generative models propose biological designs, automated foundries build and test them, and the loop closes. It reduces the field's economics to one accounting identity, `CVD = (c_design + c_build + c_test) / p`, showing the experimental hit rate `p` is the high‑leverage term AI moves; surveys what works today (AlphaFold/ESMFold, RFdiffusion/ProteinMPNN, Evo/Evo 2, CRISPR and base/prime editing); and is deliberate about the ceiling, **we can design molecules, not organisms**. Closes with six falsifiable predictions, one of them a negative prediction that pins the ceiling. → [Paper writeup](docs/10-research-ai-designed-life.md) · [`ai-designed-life`](https://github.com/dm3n/ai-designed-life)
 
-### From Vision to Reality *(independent research)*
-A 16-page single-author paper explaining how a private image becomes a physical result through one causal chain: `vision -> embodied state -> policy -> action -> physical change -> feedback`. It proves a mediation theorem, reachable-future theorem, and repetition theorem; integrates 52 cited scientific and documentary sources; distinguishes the mental, embodied, and physical planes; audits U.S. Patent 6,506,148 and the Gateway memorandum without overstating them; and converts the theory into a seven-step materialization protocol. → [Paper writeup](docs/11-research-embodied-agency.md) · [`embodied-agency-hypothesis`](https://github.com/dm3n/embodied-agency-hypothesis)
+### Alchemy *(independent research)*
+A 20-page single-author paper defining alchemy as the disciplined process by which an imaginal form is embodied, enacted, and stabilized as material reality. It proves mediation, reachable-future, identity-convergence, and repetition theorems; integrates 56 scientific, historical, and documentary sources; joins the imaginal, embodied, and material realms; reads Gateway as technological alchemy; connects Hermetic alchemy, kundalini, sacred secretion, and theosis as distinct maps of inner transformation; and converts the theory into an eight-operation Great Work. → [Paper writeup](docs/11-research-alchemy.md) · [`alchemy`](https://github.com/dm3n/alchemy)
 
 ### Airbank QoE & Mortgage platforms *(Airbank, Founder)*
 RAG‑grounded, section‑by‑section financial extraction with calibrated confidence and source‑linked auditable cells; Canadian mortgage document extraction with fraud‑signal detection and autonomous lifecycle orchestration. → [Architecture](docs/03-airbank-platforms.md)
@@ -82,7 +82,7 @@ Hands‑free, resilient, accessibility‑first assistant that narrates the world
 - [`uncertainty-propagation`](https://github.com/dm3n/uncertainty-propagation): single‑author paper on LLM reasoning reliability (LaTeX)
 - [`information-maintenance-hypothesis`](https://github.com/dm3n/information-maintenance-hypothesis): single‑author theory paper unifying aging, intelligence, and markets via information theory (LaTeX)
 - [`ai-designed-life`](https://github.com/dm3n/ai-designed-life): single‑author paper on generative models and the closing of biology's design loop (LaTeX)
-- [`embodied-agency-hypothesis`](https://github.com/dm3n/embodied-agency-hypothesis): single-author formal theory of how vision becomes physical change (LaTeX)
+- [`alchemy`](https://github.com/dm3n/alchemy): single-author formal theory of consciousness, embodiment, and materialization (LaTeX)
 - [`human-divinity`](https://github.com/dm3n/human-divinity): long‑form research manuscript (LaTeX)
 
 **AI platforms & products**
