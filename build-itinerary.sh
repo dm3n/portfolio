@@ -14,6 +14,8 @@ REPO="/Users/dm3n/Projects/daniel-edgar-ai-portfolio"
 TEX="Daniel_Edgar_Technical_Portfolio"
 RESUME="/Users/dm3n/Desktop/O-1A/Daniel Edgar Resume.pdf"
 OUT="/Users/dm3n/Desktop/O-1A/Itinerary + portfolio.pdf"
+TEMP_DIR=$(mktemp -d /tmp/o1a-itinerary.XXXXXX)
+trap 'rm -rf "$TEMP_DIR"' EXIT
 
 cd "$REPO"
 
@@ -29,8 +31,11 @@ if [[ ! -f "$RESUME" ]]; then
   exit 1
 fi
 
+echo "==> Extracting the one-page resume (the source PDF has a blank export page)"
+pdfseparate -f 1 -l 1 "$RESUME" "$TEMP_DIR/resume-%d.pdf"
+
 echo "==> Merging portfolio + resume -> Itinerary + portfolio.pdf"
-pdfunite "${REPO}/${TEX}.pdf" "$RESUME" "$OUT"
+pdfunite "${REPO}/${TEX}.pdf" "$TEMP_DIR/resume-1.pdf" "$OUT"
 
 PAGES=$(pdfinfo "$OUT" 2>/dev/null | awk '/Pages/{print $2}')
 echo "==> Done. Rebuilt: $OUT (${PAGES} pages)"

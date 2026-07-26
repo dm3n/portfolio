@@ -3,7 +3,7 @@
 **Chief Technology Officer · founder · AI systems engineer & researcher.**
 Automating Quality‑of‑Earnings and the highest‑stakes work in finance, and building the autonomous tooling that builds it.
 
-> A single, navigable body of evidence of original contributions to artificial intelligence: production AI systems, novel agentic workflows, an independent research paper validated against frontier models, and the engineering infrastructure behind it all, built across three ventures: **Flagpost AI** (Antler‑backed; Co‑founder/CEO), **Airbank** (M&A‑AI; Founder), and **Finsider** (CTO).
+> A single, navigable body of evidence of original contributions to artificial intelligence: production AI systems, novel agentic workflows, four independent single-author research papers, and the engineering infrastructure behind it all, built across three ventures: **Flagpost AI** (Antler‑backed; Co‑founder/CEO), **Airbank** (M&A‑AI; Founder), and **Finsider** (CTO).
 
 ---
 
@@ -21,7 +21,7 @@ Along the way I have:
 
 - **Designed and shipped production AI platforms** that turn messy financial documents into auditable, source‑linked analysis, for M&A Quality‑of‑Earnings and Canadian mortgage underwriting.
 - **Built [Symphony](https://github.com/dm3n/symphony)**: a Jira‑native autonomous software‑development runner deployed live at Finsider that drives product tickets all the way to evidence‑backed, human‑reviewed pull requests. It is supervised‑autonomy infrastructure: the tooling that builds the product.
-- **Written original research**: three single‑author papers. The first formalizes how errors propagate through multi‑step LLM reasoning, with theory confirmed to **~1% error** against **GPT‑5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro**, and a headline result that reframes how to spend inference compute. The second, **The Information‑Maintenance Hypothesis**, argues that aging, intelligence, and markets are one problem in information theory, anchored on two theorems (Landauer's principle and the Kelly–Cover identity). The third, **From Reading to Writing the Genome**, argues that biology is inverting from a reading science into a writing one, driven by generative models, and is rigorous about the ceiling: we can design molecules, not organisms.
+- **Written original research**: four single‑author papers. The first formalizes how errors propagate through multi‑step LLM reasoning, with theory confirmed to **~1% error** against **GPT‑5, Claude Opus 4.6, Claude Sonnet 4.6, and Gemini 3.1 Pro**. The second, **The Information‑Maintenance Hypothesis**, argues that aging, intelligence, and markets are one problem in information theory. The third, **From Reading to Writing the Genome**, argues that biology is inverting from a reading science into a writing one while drawing a hard molecule-versus-organism ceiling. The fourth, **The Embodied Agency Hypothesis**, formalizes how biological state constrains executable policies and reachable futures, then separates established bioelectric and cognitive mechanisms from unsupported quantum, DNA, and sacred-secretion claims.
 - **Engineered my own "engineering OS"** (a multi‑agent coding pipeline, persistent knowledge brain, and self‑hosted homelab) that lets one person ship like a team.
 - **Built full products from scratch across the stack**: from a complete e‑commerce platform with payments and a headless CMS, to an accessibility AI that narrates the world through smart glasses.
 
@@ -43,6 +43,7 @@ The throughline: I don't just *use* AI, I **formalize the theory, design the sys
 | 08 | [O‑1A Evidence Map](docs/08-o1a-evidence-map.md) | How this body of work maps to the extraordinary‑ability criteria (for counsel). |
 | 09 | [Research: The Information‑Maintenance Hypothesis](docs/09-research-information-maintenance.md) | Second single‑author paper: aging, intelligence, and markets as one information‑theoretic problem, anchored on two theorems. |
 | 10 | [Research: From Reading to Writing the Genome](docs/10-research-ai-designed-life.md) | Third single‑author paper: biology's shift from reading to writing genomes, the cost‑per‑validated‑design economics of AI biological design, and the molecule‑versus‑organism ceiling. |
+| 11 | [Research: The Embodied Agency Hypothesis](docs/11-research-embodied-agency.md) | Fourth single-author paper: a formal model of manifestation through embodied policy, action, and feedback, with a claim audit spanning bioelectricity, quantum biology, patents, the Gateway memorandum, and spiritual interpretation. |
 
 ---
 
@@ -59,6 +60,9 @@ A single‑author theory paper arguing that aging, intelligence, and markets are
 
 ### From Reading to Writing the Genome *(independent research)*
 A single‑author paper arguing that molecular biology is inverting from a *reading* science into a *writing* one: generative models propose biological designs, automated foundries build and test them, and the loop closes. It reduces the field's economics to one accounting identity, `CVD = (c_design + c_build + c_test) / p`, showing the experimental hit rate `p` is the high‑leverage term AI moves; surveys what works today (AlphaFold/ESMFold, RFdiffusion/ProteinMPNN, Evo/Evo 2, CRISPR and base/prime editing); and is deliberate about the ceiling, **we can design molecules, not organisms**. Closes with six falsifiable predictions, one of them a negative prediction that pins the ceiling. → [Paper writeup](docs/10-research-ai-designed-life.md) · [`ai-designed-life`](https://github.com/dm3n/ai-designed-life)
+
+### The Embodied Agency Hypothesis *(independent research)*
+A 26-page single-author paper defining an executable policy set and accessible future set to explain how intention changes lived reality through attention, action, and feedback while biology constrains which futures are practically reachable. It synthesizes 56 research and documentary sources, proves a mediator requirement and a biological-contraction proposition, audits viral claims about DNA, cardiac fields, quantum timelines, depression, EMF, sacred secretion, U.S. Patent 6,506,148, and the declassified Gateway memorandum, and closes with seven falsifiable predictions. → [Paper writeup](docs/11-research-embodied-agency.md) · [`embodied-agency-hypothesis`](https://github.com/dm3n/embodied-agency-hypothesis)
 
 ### Airbank QoE & Mortgage platforms *(Airbank, Founder)*
 RAG‑grounded, section‑by‑section financial extraction with calibrated confidence and source‑linked auditable cells; Canadian mortgage document extraction with fraud‑signal detection and autonomous lifecycle orchestration. → [Architecture](docs/03-airbank-platforms.md)
@@ -78,6 +82,7 @@ Hands‑free, resilient, accessibility‑first assistant that narrates the world
 - [`uncertainty-propagation`](https://github.com/dm3n/uncertainty-propagation): single‑author paper on LLM reasoning reliability (LaTeX)
 - [`information-maintenance-hypothesis`](https://github.com/dm3n/information-maintenance-hypothesis): single‑author theory paper unifying aging, intelligence, and markets via information theory (LaTeX)
 - [`ai-designed-life`](https://github.com/dm3n/ai-designed-life): single‑author paper on generative models and the closing of biology's design loop (LaTeX)
+- [`embodied-agency-hypothesis`](https://github.com/dm3n/embodied-agency-hypothesis): single-author paper on bioelectric regulation, cognitive state, and reachable futures (LaTeX)
 - [`human-divinity`](https://github.com/dm3n/human-divinity): long‑form research manuscript (LaTeX)
 
 **AI platforms & products**
