@@ -5,52 +5,54 @@
 
 ## The thesis
 
-Human beings can hold a form that does not yet exist, organize the body and identity
-around it, act from it, and stabilize its consequences in the physical world.
+Every created reality first exists as a mental form: an image, symbol, identity,
+intention, or model of a possible future. Human beings can hold that mental form,
+organize the body and identity around it, act from it, and stabilize its consequences
+in the physical world.
 
 The paper defines this operation precisely:
 
-> Alchemy is the disciplined process by which an imaginal form is embodied, enacted,
-> and stabilized as material reality.
+> Alchemy is the disciplined process by which a mental form is embodied and enacted
+> through a human being, then stabilized as physical reality.
 
 The causal chain is:
 
 ```text
-imaginal form -> embodied state -> policy -> action -> world change -> feedback
+mental form -> embodied human bridge -> policy -> action -> physical reality -> feedback
 ```
 
-Consciousness materializes a desired reality by entering causality through a trained
-body, a coherent identity, repeated action, and correction by evidence.
+Consciousness materializes a desired reality by entering physical causality through
+the human alchemical bridge: a trained body, coherent identity, repeated action, and
+correction by evidence.
 
-## The three realms
+## The two planes and the human bridge
 
-- **Imaginal realm:** images, symbols, goals, identities, and models of possible
-  futures.
-- **Embodied realm:** attention, expectation, physiology, skill, identity, and action
-  readiness.
-- **Material realm:** observable artifacts, relationships, institutions, environments,
-  and world states.
+- **Mental/astral plane:** mental forms, images, symbols, identities, intentions, and
+  models of possible realities.
+- **Physical plane:** observable bodies, actions, artifacts, relationships,
+  institutions, environments, and world states.
 
-The mental or astral image is treated as a causally important form, not as a finished
-object. It becomes physically consequential when it changes the policies of an
-embodied agent.
+The human being is not a third plane. The embodied human is the alchemical connection
+between the two planes: the living bridge through which a mental form can alter
+attention, expectation, physiology, skill, identity, policy, and action, then become
+physically consequential.
 
 ## Four proved results
 
-For imaginal target `I`, embodied state `B`, environment `E`, policy `pi`, and later
+For mental form `M`, embodied state `B`, environment `E`, policy `pi`, and later
 world state `W`, the materialization operator is:
 
 ```text
-P(W_next | I,B,E)
+P(W_next | M,B,E)
 =
 sum over pi [
-  P(W_next | do(pi),B,E) P(pi | I,B,E)
+  P(W_next | do(pi),B,E) P(pi | M,B,E)
 ].
 ```
 
 The paper proves:
 
-1. **Mediation theorem.** If an imaginal form changes no mediator, it does not change
+1. **Mediation theorem.** If a mental form changes no mediator, it does not change
    an external result under the ordinary causal graph.
 2. **Reachable-future theorem.** An embodied state that enables more reliable policies
    can enlarge the set of reachable material futures.
@@ -69,7 +71,7 @@ consciousness are interpreted as distinct symbolic maps with a shared functional
 pattern:
 
 ```text
-higher form -> disciplined vessel -> transformed identity -> transformed conduct
+mental form -> disciplined vessel -> transformed identity -> transformed conduct
 ```
 
 The paper keeps symbolic convergence separate from anatomical proof. It does not treat
@@ -77,16 +79,16 @@ the traditions as historically or physiologically identical.
 
 The exact supplied copies of U.S. Patent 6,506,148 B2 and the 1983 Army Gateway
 memorandum are archived with the paper. Gateway is analyzed as technological alchemy:
-an institutional effort to operationalize altered-state disciplines through audio,
-feedback, visualization, and staged practice. The patent is analyzed as a genuine
-technical and legal claim. Neither document is presented as independent experimental
-validation.
+an institutional effort to condition the human bridge that carries a mental form
+toward physical realization through audio, feedback, visualization, and staged
+practice. The patent is analyzed as a genuine technical and legal claim. Neither
+document is presented as independent experimental validation.
 
 ## The Great Work
 
 The practical protocol follows eight operations:
 
-1. Name the form.
+1. Name the mental form.
 2. Assay the present reality.
 3. Solve the inherited pattern.
 4. Visualize outcome, process, and identity.
@@ -98,7 +100,7 @@ The practical protocol follows eight operations:
 The paper also explains why processed food, sleep disruption, notifications, compulsive
 novelty, and cue-driven consumption can become counter-alchemical in effect. It avoids
 an unsupported conspiracy claim. Systems optimized for engagement and consumption can
-fragment the capacities required to hold and materialize a chosen form.
+fragment the capacities required to hold and materialize a chosen mental form.
 
 ## Why this belongs in the portfolio
 
@@ -108,7 +110,8 @@ systems design. It states the alchemical thesis positively, proves what its caus
 permits, preserves spiritual meaning without manufacturing scientific certainty, and
 turns the result into a repeatable discipline.
 
-> Bottom line: Daniel authored a formal theory of how a future first held in
-> consciousness can become physical through embodiment, identity, policy, action, and
-> feedback. The 20-page paper contains four theorems, two original diagrams, 56 cited
-> sources, an eight-operation Great Work, and six falsifiable predictions.
+> Bottom line: Daniel authored a two-plane formal theory of how a future first held as
+> a mental form in the mental/astral plane can become physical through the embodied
+> human bridge, identity, policy, action, and feedback. The 20-page, 8,070-word paper
+> contains four theorems, two original diagrams, 56 cited sources, an eight-operation
+> Great Work, and six falsifiable predictions.
