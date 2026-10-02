@@ -12,8 +12,8 @@ set -euo pipefail
 
 REPO="/Users/dm3n/Projects/daniel-edgar-ai-portfolio"
 TEX="Daniel_Edgar_Technical_Portfolio"
-RESUME="/Users/dm3n/Desktop/O-1A/Daniel Edgar Resume.pdf"
-OUT="/Users/dm3n/Desktop/O-1A/Itinerary + portfolio.pdf"
+RESUME="${RESUME:-/Users/dm3n/Desktop/O-1A/Daniel Edgar Resume.pdf}"
+OUT="${OUT:-/Users/dm3n/Desktop/O-1A/Itinerary + portfolio.pdf}"
 TEMP_DIR=$(mktemp -d /tmp/o1a-itinerary.XXXXXX)
 trap 'rm -rf "$TEMP_DIR"' EXIT
 

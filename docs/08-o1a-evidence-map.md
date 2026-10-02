@@ -28,8 +28,8 @@ This page maps the contents of this portfolio to the O‑1A "extraordinary abili
 ## 1.C: High Salary / Remuneration
 | Checklist item | Where |
 |---|---|
-| Salary exceeding the norm | **$200K CTO salary at age 20**, stated in [Ventures](05-ventures-and-companies.md); employment letter / pay records in the data room |
-| Equity & valuation | Raised **$220K at a $2.2M valuation** (Flagpost / Antler); SAFE‑backed equity: terms in the data room |
+| Salary exceeding the norm | Executed CTO package: **USD $150K base salary** (Executive Employment Agreement, May 2026), referral fee of 10% of originated net cash receipts capped at USD $100K (Amendment One, fully executed September 30, 2026), and a board-approved option on 1,111,111 common shares (consent signed September 29, 2026); counsel should argue total remuneration with position- and geography-appropriate comparison and payroll evidence and should not characterize the base salary alone as top-one-percent compensation |
+| Equity & valuation | Raised **CAD $220,000 at a CAD $2.2 million post-money valuation cap** (Flagpost / Antler); SAFE‑backed equity: terms in the data room |
 
 ## 1.D: Letters of Recommendation (≥10)
 | Source category | Notes |

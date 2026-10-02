@@ -12,7 +12,7 @@ A compressed timeline of company‑building in AI: from an Antler‑backed found
 ## Flagpost AI Inc.: Co‑founder & CEO (Antler Canada)
 *Incorporated November 2025 · Toronto, Canada*
 
-Flagpost was built inside the **Antler Canada residency (TOR8 cohort)**: Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised $220,000 at a $2.2M valuation**, anchored by a **SAFE from Antler Canada Fund I, L.P.**, at age 19.
+Flagpost was built inside the **Antler Canada residency (TOR8 cohort)**: Antler selects a small number of founders from thousands of applicants and backs them with a pre‑seed investment. As Co‑founder & CEO, Daniel **raised CAD $220,000 at a CAD $2.2 million post-money valuation cap**, anchored by a **SAFE from Antler Canada Fund I, L.P.**, at age 19.
 
 - Passed the Antler Investment Committee and onboarded into the residency cohort.
 - Built the founding team, corporate structure (cap table, shareholder agreement, reverse‑vesting, stock option plan, IP assignment), and banking.
@@ -43,7 +43,7 @@ Airbank also assembled an advisory and design‑partner network spanning private
 ## Finsider: Chief Technology Officer (full‑time)
 *[finsider.ai](https://finsider.ai)*
 
-Daniel joined **Finsider as full‑time CTO on a $200,000 salary, at age 20**, bringing the M&A‑AI thesis and the agentic‑systems expertise from Flagpost/Airbank into a funded, operating fintech with an existing product and customers. A $200K CTO compensation at 20 is itself O‑1A evidence of **high remuneration** (criterion 1.C): it materially exceeds the norm for the applicant's age and tenure and reflects the market's valuation of his extraordinary ability.
+Daniel joined **Finsider as full-time CTO at age 20**, bringing the M&A-AI thesis and the agentic-systems expertise from Flagpost/Airbank into an operating fintech. His compensation is a **USD $150,000 annual base salary** under the executed May 2026 Executive Employment Agreement, a referral fee of 10% of net cash receipts from customers he originates (capped at USD $100,000 under Amendment One, fully executed September 30, 2026), and an option to purchase 1,111,111 common shares under the Finsider Inc. 2026 Equity Incentive Plan, approved by board and stockholder consent on September 29, 2026. Any O-1A high-remuneration argument should rest on total remuneration (salary, referral fee, and equity) with position- and geography-appropriate comparison evidence selected by counsel.
 
 The mandate: **automate Quality‑of‑Earnings**, the mandatory, six‑figure financial‑diligence report behind every M&A transaction, and build the platform and agentic infrastructure to do it at scale.
 
